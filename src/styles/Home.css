@@ -5,9 +5,17 @@
   color: #3e497a;
 }
 
+img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background-color:teal;
+    box-shadow: 1px 2px 8px 3px lightblue;
+  }
+
 .about {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 30px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,17 +27,17 @@
 
 .about h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   color: #e9d35b;
   height: 50px;
 }
 
 .about .prompt {
   width: 40%;
-  font-size: 30px;
+  font-size: 20px;
 }
 .prompt svg {
-  font-size: 60px;
+  font-size: 40px;
   margin: 5px;
   color: white;
 }

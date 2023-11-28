@@ -1,9 +1,9 @@
 import ProjImg1 from '../assets/p1.png'
 import ProjImg2 from '../assets/p2.png'
-import ProjImg3 from '../assets/p1.png'
-import ProjImg4 from '../assets/p2.png'
+import ProjImg3 from '../assets/p3.png'
+import ProjImg4 from '../assets/p4.png'
 import ProjImg5 from '../assets/p1.png'
-import ProjImg6 from '../assets/p1.png'
+import ProjImg6 from '../assets/p6.png'
 import ProjImg7 from '../assets/p1.png'
 
 export const ProjectList = [
