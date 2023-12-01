@@ -23,19 +23,19 @@ function Home() {
           <li className="item">
             <h2>Front-End</h2>
             <span>
-              ReactJS, HTML, CSS, Bootstrap, TailwindCSS, MUI
+              ReactJS, HTML, CSS, JS, Bootstrap, TailwindCSS
             </span>
           </li>
           <li className="item">
             <h2>Back-End</h2>
             <span>
-              Laravel, PHP, NodeJS, MySQL 
+              Laravel, PHP, NodeJS, MySQL, MongoDB 
             </span>
           </li>
           <li className="item">
             <h2>Languages</h2>
             <span>
-              Java, JS, Python, C#, C, TypeScript
+              Java, Python, C#, C
             </span>
           </li>
         </ol>
