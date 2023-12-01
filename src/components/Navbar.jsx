@@ -35,6 +35,7 @@ export default function Navbar() {
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/experience">Experiences</Link>
+          <Link to="/special-moments">Special moments</Link>
         </div>
         <div className="right-nav">
           <div className="innerDiv" onClick={handleButtonClick}>
