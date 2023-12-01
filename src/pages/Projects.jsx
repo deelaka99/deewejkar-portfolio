@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div className="projects">
       <h1>My Personal Projects</h1>
-      <h2 className="p-formatter">Web</h2>
+      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Web -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Web" ? (
@@ -16,7 +16,7 @@ function Projects() {
         )}
       </div>
 
-      <h2 className="p-formatter">Mobile</h2>
+      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Mobile -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Mobile" ? (
@@ -25,7 +25,7 @@ function Projects() {
         )}
       </div>
 
-      <h2 className="p-formatter">Other</h2>
+      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Other -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Code" ? (
