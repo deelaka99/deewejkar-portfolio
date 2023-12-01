@@ -6,6 +6,7 @@ import ProjImg5 from "../assets/2.png";
 import ProjImg6 from "../assets/4.png";
 import ProjImg7 from "../assets/5.png";
 import ProjImg8 from "../assets/7.png";
+import ProjImg9 from "../assets/8.png";
 
 export const ProjectList = [
   {
@@ -60,7 +61,7 @@ export const ProjectList = [
   },
   {
     name: "Coffee-machine",
-    image: ProjImg7,
+    image: ProjImg9,
     skills: "Python",
     specialization: "Code",
   },
