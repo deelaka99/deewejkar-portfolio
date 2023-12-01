@@ -8,9 +8,16 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  useEffect(()=>{
+  const handleButtonClick = () => {
+    const googleDriveLink = "https://drive.google.com/file/d/1D0zJELoCiRlpgKH8xrGlJab4KHqZRQ-q/view?usp=drive_link";
+
+    // Open the link in a new tab
+    window.open(googleDriveLink, "_blank");
+  };
+
+  useEffect(() => {
     setExpandNavbar(false);
-  },[location]);
+  }, [location]);
 
   return (
     <div className="navbar" id={expandNavbar ? "open" : "close"}>
@@ -24,9 +31,16 @@ export default function Navbar() {
         </button>
       </div>
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/experience">Experiences</Link>
+        <div className="left-nav">
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/experience">Experiences</Link>
+        </div>
+        <div className="right-nav">
+          <div className="innerDiv" onClick={handleButtonClick}>
+            <div className="cv-btn">Download the CV</div>
+          </div>
+        </div>
       </div>
     </div>
   );
