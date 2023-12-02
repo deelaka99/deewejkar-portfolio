@@ -40,7 +40,7 @@ function ProjectDisplay() {
   return (
     <div className="project">
       <h1 style={{ fontFamily: "monospace" }}>{project.name}</h1>
-      <img src={project.image} alt="project image" />
+      <img src={project.image1} alt="project image" />
       <p>
         <b>Specialization:</b> {project.specialization}
       </p>
