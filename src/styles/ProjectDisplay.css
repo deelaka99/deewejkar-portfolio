@@ -47,3 +47,103 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 1080px) {
+
+  .project{
+    margin-top: 200px;
+  }
+
+  .project h1{
+    font-size: 30px;
+  }
+
+  .project p{
+    font-size: 18px;
+  }
+
+  .project img{
+    width: 600px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .project{
+    margin-top: 180px;
+  }
+
+  .project h1{
+    font-size: 30px;
+  }
+
+  .project p{
+    font-size: 15px;
+  }
+
+  .project img{
+    width: 500px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .project{
+    margin-top: 0px;
+  }
+
+  .project h1{
+    font-size: 20px;
+  }
+
+  .project img{
+    width: 290px;
+    height: 145px;
+  }
+
+  .project p{
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 378px) {
+
+  .project{
+    margin-top: 10px;
+  }
+
+  .project h1{
+    font-size: 15px;
+  }
+
+  .project img{
+    width: 250px;
+    height: 125px;
+  }
+
+  .project p{
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+
+  .project{
+    margin-top: 0px;
+  }
+
+  .project h1{
+    font-size: 12px;
+  }
+
+  .project img{
+    width: 200px;
+    height: 100px;
+  }
+
+  .project p{
+    font-size: 10px;
+  }
+}
