@@ -16,8 +16,22 @@ import ProjImg8 from "../assets/7.png";
 import ProjImg8_1 from "../assets/11.png";
 import ProjImg9 from "../assets/8.png";
 import ProjImg9_1 from "../assets/18.png";
+import ProjImg10 from "../assets/20.png";
+import ProjImg10_1 from "../assets/19.png";
 
 export const ProjectList = [
+  {
+    name: "Starbuck POS System",
+    image: ProjImg10,
+    image1: ProjImg10_1,
+    skills: "ReactJS, TailwindCSS, HTML, JS, CSS",
+    specialization: "Web",
+    desc: "StarBuck is a personalized Point of Sale (POS) system meticulously crafted by me using cutting-edge technologies such as ReactJS and TailwindCSS frameworks. The development process began with the creation of a comprehensive wireframe using Figma, ensuring a thoughtful and user-friendly design. Thorough attention was given to tablet devices, optimizing responsiveness for seamless user experience. Subsequently, the focus extended to laptop and desktop devices, ensuring a consistent and intuitive interface across various screen sizes. This streamlined POS system operates on a simple yet efficient model, with item data sourced from a JSON file. Looking ahead, there are ambitious plans to further enhance StarBuck by integrating a backend system in the near future. This evolution promises to elevate the system's capabilities, enabling it to scale and adapt to the dynamic needs of users. StarBuck stands as a testament to innovation, combining frontend expertise with the vision for future backend integration. \nThe User credentials are; \nEmail:-deelaka@gmail.com, Password:- 123",
+    figma:
+      "https://www.figma.com/file/YWRfRW8hFnzNpTmlCBgjqN/StarBuck-POS-System?type=design&node-id=0%3A1&mode=design&t=JXVDDI030wHHo5bj-1",
+    github: "https://github.com/deelaka99/starbuck",
+    activelink: "https://starbuck-pos.netlify.app/",
+  },
   {
     name: "DTM Laborties Management System",
     image: ProjImg5,
