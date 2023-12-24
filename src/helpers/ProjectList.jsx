@@ -18,6 +18,8 @@ import ProjImg9 from "../assets/8.png";
 import ProjImg9_1 from "../assets/18.png";
 import ProjImg10 from "../assets/20.png";
 import ProjImg10_1 from "../assets/19.png";
+import ProjImg11 from "../assets/21.png";
+import ProjImg11_1 from "../assets/22.png";
 
 export const ProjectList = [
   {
@@ -55,6 +57,18 @@ export const ProjectList = [
       "https://www.figma.com/file/ynQFXTGAoRdczP9VYIIkxx/Company-Admin-dashboard?type=design&node-id=0-1&mode=design&t=yzqAJrGmvAF4aCBp-0",
     github: "https://github.com/deelaka99/company-admin-panel-main",
     activelink: "https://dtm-admin-panel.netlify.app/",
+  },
+  {
+    name: "AT Digital Responsive site",
+    image: ProjImg11,
+    image1: ProjImg11_1,
+    skills: "ReactJS, TailwindCSS, HTML, JS, CSS",
+    specialization: "Web",
+    desc: "This website was crafted as part of a challenging task assigned by AT Digital during the interview selection process for their Frontend Developer Internship Program. Fueled by the determination to showcase my skills, I dedicated 48 hours to create a fully responsive site that not only meets the requirements but also reflects my passion for frontend development. Explore the results of this intensive effort and witness the seamless integration of design and functionality that defines my commitment to excellence in web development.",
+    figma:
+      "https://www.figma.com/file/7jb6yFxNhUwHDgAUQzzIpN/Front-end-Dev-Project?type=design&node-id=2468-430&mode=design&t=Sm39ykfQayZjRiyh-0",
+    github: "https://github.com/deelaka99/AT_Digital_site",
+    activelink: "https://at-digital-site.netlify.app/",
   },
   {
     name: "Restaurent Management System",
