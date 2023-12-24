@@ -94,18 +94,6 @@ export const ProjectList = [
     activelink: "https://dee-wej-kar.netlify.app/",
   },
   {
-    name: "My Bio Website",
-    image: ProjImg4,
-    image1: ProjImg4_1,
-    skills: "HTML, CSS, JavaScript, PHP, Bootstrap, Adobe Photoshop",
-    specialization: "Web",
-    desc: "This portfolio represents my initial foray into showcasing my skills and creative endeavors. It features a collection of my artworks, photography, and a dedicated site for my mobile photography. While it may be modest in its scope, this portfolio serves as a meaningful introduction to my artistic expressions and passion for photography. As my inaugural portfolio, it reflects the beginning of my journey in presenting my work to a wider audience, setting the stage for future expansions and refinements.",
-    figma: false,
-    github: "https://github.com/deelaka99/myBioWebsite",
-    activelink: "https://deelaka99.github.io/myBioWebsite/",
-  },
-
-  {
     name: "Glamoure.360 Online Shopping Mall",
     image: ProjImg6,
     image1: ProjImg6_1,
@@ -115,6 +103,17 @@ export const ProjectList = [
     figma: false,
     github: "https://github.com/deelaka99/Glamoure.360",
     activelink: "https://deelaka99.github.io/Glamoure.360/",
+  },
+  {
+    name: "My Bio Website",
+    image: ProjImg4,
+    image1: ProjImg4_1,
+    skills: "HTML, CSS, JavaScript, PHP, Bootstrap, Adobe Photoshop",
+    specialization: "Web",
+    desc: "This portfolio represents my initial foray into showcasing my skills and creative endeavors. It features a collection of my artworks, photography, and a dedicated site for my mobile photography. While it may be modest in its scope, this portfolio serves as a meaningful introduction to my artistic expressions and passion for photography. As my inaugural portfolio, it reflects the beginning of my journey in presenting my work to a wider audience, setting the stage for future expansions and refinements.",
+    figma: false,
+    github: "https://github.com/deelaka99/myBioWebsite",
+    activelink: "https://deelaka99.github.io/myBioWebsite/",
   },
   {
     name: "Fit360 Fitness Tracker App",
