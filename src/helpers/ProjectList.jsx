@@ -33,18 +33,6 @@ export const ProjectList = [
     activelink: "https://starbuck-pos.netlify.app/",
   },
   {
-    name: "DTM Laborties Management System",
-    image: ProjImg5,
-    image1: ProjImg5_1,
-    skills: "ReactJS, Firebase, TailwindCSS, HTML, JS, CSS",
-    specialization: "Web",
-    desc: "This project was a pivotal component of my university's mini-project, where I took on a lead role in managing two integral sites. Focused on enhancing laboratory management in Sri Lanka, this specific site delivers comprehensive functionality, including Create, Read, Update, and Delete (CRUD) operations for both laboratories and users. The primary objective of the platform is to streamline local laboratory management, and it achieves this through robust features. The system enables seamless handling of labs and user data, allowing for efficient CRUD operations. Additionally, the platform prioritizes security with built-in features such as user authentication and password management, providing a secure and user-friendly experience. As part of this initiative, I embraced the responsibility of overseeing and implementing these critical features. Throughout the development process, I navigated the complexities of user authentication, ensuring the system's integrity. Furthermore, the platform incorporates a user-friendly interface for password management, facilitating a convenient and secure means for users to update their passwords. This project not only showcases my technical proficiency in implementing CRUD functionalities but also underscores my commitment to ensuring secure and efficient data management in the context of laboratory administration",
-    figma:
-      "https://www.figma.com/file/ynQFXTGAoRdczP9VYIIkxx/Company-Admin-dashboard?type=design&node-id=0-1&mode=design&t=yzqAJrGmvAF4aCBp-0",
-    github: "https://github.com/deelaka99/company-admin-panel-main",
-    activelink: "https://dtm-admin-panel.netlify.app/",
-  },
-  {
     name: "SharpTester Lab Management System",
     image: ProjImg8,
     image1: ProjImg8_1,
@@ -55,6 +43,18 @@ export const ProjectList = [
       "https://www.figma.com/file/japBwlqRJzUXl6XM3lQJap/Laboratory-Dashboard?type=design&node-id=0%3A1&mode=design&t=wkyTHeFT9MO7oV3u-1",
     github: "https://github.com/deelaka99/lab-admin-panel",
     activelink: "https://sharptester-lms.netlify.app/",
+  },
+  {
+    name: "DTM Laborties Management System",
+    image: ProjImg5,
+    image1: ProjImg5_1,
+    skills: "ReactJS, Firebase, TailwindCSS, HTML, JS, CSS",
+    specialization: "Web",
+    desc: "This project was a pivotal component of my university's mini-project, where I took on a lead role in managing two integral sites. Focused on enhancing laboratory management in Sri Lanka, this specific site delivers comprehensive functionality, including Create, Read, Update, and Delete (CRUD) operations for both laboratories and users. The primary objective of the platform is to streamline local laboratory management, and it achieves this through robust features. The system enables seamless handling of labs and user data, allowing for efficient CRUD operations. Additionally, the platform prioritizes security with built-in features such as user authentication and password management, providing a secure and user-friendly experience. As part of this initiative, I embraced the responsibility of overseeing and implementing these critical features. Throughout the development process, I navigated the complexities of user authentication, ensuring the system's integrity. Furthermore, the platform incorporates a user-friendly interface for password management, facilitating a convenient and secure means for users to update their passwords. This project not only showcases my technical proficiency in implementing CRUD functionalities but also underscores my commitment to ensuring secure and efficient data management in the context of laboratory administration",
+    figma:
+      "https://www.figma.com/file/ynQFXTGAoRdczP9VYIIkxx/Company-Admin-dashboard?type=design&node-id=0-1&mode=design&t=yzqAJrGmvAF4aCBp-0",
+    github: "https://github.com/deelaka99/company-admin-panel-main",
+    activelink: "https://dtm-admin-panel.netlify.app/",
   },
   {
     name: "Restaurent Management System",
