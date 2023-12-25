@@ -34,6 +34,7 @@ export const ProjectList = [
     figma:
       "https://www.figma.com/file/YWRfRW8hFnzNpTmlCBgjqN/StarBuck-POS-System?type=design&node-id=0%3A1&mode=design&t=JXVDDI030wHHo5bj-1",
     github: "https://github.com/deelaka99/starbuck",
+    youtube: "https://youtu.be/mbZdM6MVcTk?si=o-XvT3UZLSgJTzKP",
     activelink: "https://starbuck-pos.netlify.app/",
   },
   {
@@ -46,6 +47,7 @@ export const ProjectList = [
     figma:
       "https://www.figma.com/file/japBwlqRJzUXl6XM3lQJap/Laboratory-Dashboard?type=design&node-id=0%3A1&mode=design&t=wkyTHeFT9MO7oV3u-1",
     github: "https://github.com/deelaka99/lab-admin-panel",
+    youtube: "https://youtu.be/vyH_a4MvQA4",
     activelink: "https://sharptester-lms.netlify.app/",
   },
   {
@@ -128,6 +130,7 @@ export const ProjectList = [
     appLink:
       "https://drive.google.com/file/d/1LJ7R3UIVlxWm7oEVRuCpq0RSHXrvjvY_/view?usp=sharing",
     github: "https://github.com/deelaka99/Fit360",
+    youtube: "https://youtu.be/4oT-3CXrkE4",
     activelink: false,
   },
   {
@@ -140,6 +143,7 @@ export const ProjectList = [
     figma: false,
     appLink: false,
     github: "https://github.com/deelaka99/To_Do_List",
+    youtube: "https://youtu.be/TGr-Z4ANOpE",
     activelink: false,
   },
   {
