@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 function ProjectItem({ image, name, id }) {
   const navigate = useNavigate();
+  const projectName = { __html: name };
+
   return (
     <div
       className="projectItem"
@@ -12,7 +14,7 @@ function ProjectItem({ image, name, id }) {
       }}
     >
       <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
-      <h1 style={{fontSize: 'large'}}>{name}</h1>
+      <h1 style={{ fontSize: 'large' }} dangerouslySetInnerHTML={projectName} />
     </div>
   );
 }
