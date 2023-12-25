@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import GithubIcon from "@mui/icons-material/GitHub";
 import PublicIcon from "@mui/icons-material/Public";
+import YoutubeIcon from "@mui/icons-material/YouTube";
 import "../styles/ProjectDisplay.css";
 
 function ProjectDisplay() {
@@ -29,6 +30,13 @@ function ProjectDisplay() {
 
     // Open the link in a new tab
     window.open(githubLink, "_blank");
+  };
+
+  const handleYoutubeClick = () => {
+    const youtubeLink = project.youtube;
+
+    // Open the link in a new tab
+    window.open(youtubeLink, "_blank");
   };
 
   const handleActiveSiteClick = () => {
@@ -89,6 +97,13 @@ function ProjectDisplay() {
             className="figmaLink"
             style={{ fontSize: "40px" }}
             onClick={handleActiveSiteClick}
+          />
+        ) : null}
+        {project.youtube ? (
+          <YoutubeIcon
+            className="figmaLink"
+            style={{ fontSize: "40px" }}
+            onClick={handleYoutubeClick}
           />
         ) : null}
       </div>
