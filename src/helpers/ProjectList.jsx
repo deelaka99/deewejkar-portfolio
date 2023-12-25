@@ -148,7 +148,7 @@ export const ProjectList = [
     image1: ProjImg12_1,
     skills: "React Native, NativewindCSS, Firebase",
     specialization: "Mobile",
-    desc: "The To-Do App, crafted with Android Studio and powered by SQLite, represents an assignment undertaken during my second year in the OUSL Android subject. This application serves as a practical implementation of fundamental Android development concepts, featuring essential CRUD (Create, Read, Update, Delete) operations for the seamless management of daily tasks. Designed with simplicity in mind, the app provides an intuitive user experience, demonstrating my proficiency in mobile app development and database integration.",
+    desc: "The SharpTester app is designed to empower end-users with a comprehensive health analysis based on a systematic comparison of their previous health reports. This dynamic application leverages the robust capabilities of Firebase, incorporating real-time database functionality and secure authentication protocols. The app seamlessly interfaces with the Sharptester lab admin panel, establishing a streamlined process for retrieving health reports exclusively from a designated and registered laboratory. Developed using React Native and enhanced with Nativewind for a responsive and intuitive user interface, the SharpTester app ensures a user-friendly experience while prioritizing the privacy and accuracy of health information. Through this innovative mobile solution, individuals can gain valuable insights into their health status, facilitated by the seamless integration of cutting-edge technologies.",
     figma:
       "https://www.figma.com/file/6tODPMLgAq0k9D3TQKIvJW/Mobile-app?type=design&node-id=0-1&mode=design&t=7vPc9jSbcTPMYcVQ-0",
     appLink: false,

@@ -8,6 +8,7 @@ import "../styles/ProjectDisplay.css";
 function ProjectDisplay() {
   const { id } = useParams();
   const project = ProjectList[id];
+  const projectName = { __html: project.name };
 
   const handleFigmaClick = () => {
     const figmaLink = project.figma;
@@ -39,7 +40,10 @@ function ProjectDisplay() {
 
   return (
     <div className="project">
-      <h1 style={{ fontFamily: "monospace" }}>{project.name}</h1>
+      <h1
+        style={{ fontFamily: "monospace", textAlign: "center" }}
+        dangerouslySetInnerHTML={projectName}
+      />
       <img src={project.image1} alt="project image" />
       <p>
         <b>Specialization:</b> {project.specialization}
