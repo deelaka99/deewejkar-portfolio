@@ -20,6 +20,8 @@ import ProjImg10 from "../assets/20.png";
 import ProjImg10_1 from "../assets/19.png";
 import ProjImg11 from "../assets/21.png";
 import ProjImg11_1 from "../assets/22.png";
+import ProjImg12 from "../assets/23.png";
+import ProjImg12_1 from "../assets/23.png";
 
 export const ProjectList = [
   {
@@ -138,6 +140,19 @@ export const ProjectList = [
     figma: false,
     appLink: false,
     github: "https://github.com/deelaka99/To_Do_List",
+    activelink: false,
+  },
+  {
+    name: "Report Analyzing App<br/><span style='color:red;font-style:italic;font-size:13px;'>--Under-development--</span>",
+    image: ProjImg12,
+    image1: ProjImg12_1,
+    skills: "React Native, NativewindCSS, Firebase",
+    specialization: "Mobile",
+    desc: "The To-Do App, crafted with Android Studio and powered by SQLite, represents an assignment undertaken during my second year in the OUSL Android subject. This application serves as a practical implementation of fundamental Android development concepts, featuring essential CRUD (Create, Read, Update, Delete) operations for the seamless management of daily tasks. Designed with simplicity in mind, the app provides an intuitive user experience, demonstrating my proficiency in mobile app development and database integration.",
+    figma:
+      "https://www.figma.com/file/6tODPMLgAq0k9D3TQKIvJW/Mobile-app?type=design&node-id=0-1&mode=design&t=7vPc9jSbcTPMYcVQ-0",
+    appLink: false,
+    github: "https://github.com/deelaka99/SharpTester",
     activelink: false,
   },
   {
