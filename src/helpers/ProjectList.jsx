@@ -60,6 +60,7 @@ export const ProjectList = [
     figma:
       "https://www.figma.com/file/ynQFXTGAoRdczP9VYIIkxx/Company-Admin-dashboard?type=design&node-id=0-1&mode=design&t=yzqAJrGmvAF4aCBp-0",
     github: "https://github.com/deelaka99/company-admin-panel-main",
+    youtube: false,
     activelink: "https://dtm-admin-panel.netlify.app/",
   },
   {
@@ -72,6 +73,7 @@ export const ProjectList = [
     figma:
       "https://www.figma.com/file/7jb6yFxNhUwHDgAUQzzIpN/Front-end-Dev-Project?type=design&node-id=2468-430&mode=design&t=Sm39ykfQayZjRiyh-0",
     github: "https://github.com/deelaka99/AT_Digital_site",
+    youtube: false,
     activelink: "https://at-digital-site.netlify.app/",
   },
   {
@@ -84,6 +86,7 @@ export const ProjectList = [
     desc: "This project represents a significant milestone in my academic journey as it was part of a University Mini Project undertaken in the second year. Serving as a collaborative group effort, I assumed the pivotal role of overseeing the development of the entire site.The project is structured into two distinct components: the Admin Dashboard and the User Portal. The Admin Dashboard empowers administrators with comprehensive CRUD (Create, Read, Update, Delete) functionalities. Admins can effortlessly manage the platform by adding and deleting food items, incorporating new chefs, receiving and reviewing orders, and performing various administrative tasks. On the other hand, the User Portal provides a seamless experience for users. They can effortlessly add items to their cart and submit orders, streamlining the process of selecting and purchasing items from the platform. As the primary developer, my responsibilities extended to crafting both the Admin Dashboard and the User Portal, ensuring that each component fulfilled its designated functions effectively. This project not only honed my technical skills but also provided valuable experience in collaborative development within a team setting.",
     figma: false,
     github: "https://github.com/deelaka99/Restaurent_Management_System",
+    youtube: false,
     activelink: false,
   },
   {
@@ -95,6 +98,7 @@ export const ProjectList = [
     desc: "This project marks a significant milestone as my inaugural venture into ReactJS development. Undertaking this project proved to be an invaluable learning experience, allowing me to gain substantial insights into the intricacies of ReactJS and Tailwind CSS. Despite the realization that the project may not have achieved the level of excellence I initially envisioned, the journey was nonetheless enriching, and I consider the outcome to be a commendable achievement. This project served as a foundational step in my ReactJS journey, laying the groundwork for future endeavors and showcasing my dedication to continuous learning and improvement.",
     figma: false,
     github: "https://github.com/deelaka99/dee-wej-kar-portfolio",
+    youtube: false,
     activelink: "https://dee-wej-kar.netlify.app/",
   },
   {
@@ -106,6 +110,7 @@ export const ProjectList = [
     desc: "This commercial website stands as a testament to my inaugural venture into the world of web development, serving as my first project for a shopping mall. Executed as part of my first-year mini project at OUSL, this website was crafted based on my original design and implementation plan. Taking on the challenge of creating a digital presence for a shopping mall allowed me to apply theoretical knowledge gained in my studies and embark on a hands-on learning experience. This project marks a pivotal moment in my journey, setting the foundation for subsequent web development endeavors and fostering a passion for creating impactful online solutions.",
     figma: false,
     github: "https://github.com/deelaka99/Glamoure.360",
+    youtube: false,
     activelink: "https://deelaka99.github.io/Glamoure.360/",
   },
   {
@@ -117,6 +122,7 @@ export const ProjectList = [
     desc: "This portfolio represents my initial foray into showcasing my skills and creative endeavors. It features a collection of my artworks, photography, and a dedicated site for my mobile photography. While it may be modest in its scope, this portfolio serves as a meaningful introduction to my artistic expressions and passion for photography. As my inaugural portfolio, it reflects the beginning of my journey in presenting my work to a wider audience, setting the stage for future expansions and refinements.",
     figma: false,
     github: "https://github.com/deelaka99/myBioWebsite",
+    youtube: false,
     activelink: "https://deelaka99.github.io/myBioWebsite/",
   },
   {
@@ -157,6 +163,7 @@ export const ProjectList = [
       "https://www.figma.com/file/6tODPMLgAq0k9D3TQKIvJW/Mobile-app?type=design&node-id=0-1&mode=design&t=7vPc9jSbcTPMYcVQ-0",
     appLink: false,
     github: "https://github.com/deelaka99/SharpTester",
+    youtube: false,
     activelink: false,
   },
   {
@@ -168,6 +175,7 @@ export const ProjectList = [
     desc: "This project, undertaken during my first year in the OUSL Python subject, represents a mini project that delves into the realms of object-oriented programming (OOP). Specifically, the project features a code-line-based interface designed for the operation of a coffee machine. Leveraging OOP concepts, I crafted a robust and efficient system that showcases my understanding and application of Python programming principles. Through this endeavor, I not only gained valuable insights into Python development but also honed my skills in designing effective and structured solutions.",
     figma: false,
     github: "https://github.com/deelaka99/Coffee-machine",
+    youtube: false,
     activelink: false,
   },
 ];
