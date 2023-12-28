@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -35,6 +35,10 @@ import Img23 from "../assets/specialMoments/2020_09_03.jpg";
 import "../styles/specialMoments.css";
 
 function Experience() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#021f6a">

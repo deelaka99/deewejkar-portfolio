@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import YoutubeIcon from "@mui/icons-material/YouTube";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -8,6 +8,10 @@ import Certifications from "../components/Certifications";
 import "../styles/Home.css";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home">
       <div className="about">

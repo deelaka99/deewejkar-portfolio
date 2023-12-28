@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
 import GithubIcon from "@mui/icons-material/GitHub";
@@ -10,6 +10,10 @@ function ProjectDisplay() {
   const { id } = useParams();
   const project = ProjectList[id];
   const projectName = { __html: project.name };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleFigmaClick = () => {
     const figmaLink = project.figma;

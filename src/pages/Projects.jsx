@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ProjectItem from "../components/ProjectItem";
 import "../styles/Project.css";
 import { ProjectList } from "../helpers/ProjectList";
 
 function Projects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="projects">
       <h1 style={{color:"#021f6a",fontFamily:"sans"}}>My Personal Projects</h1>

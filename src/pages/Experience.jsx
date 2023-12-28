@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -17,6 +17,10 @@ import SUSL from "../assets/logos/susl.png";
 import ESOFT from "../assets/logos/esoft.png";
 
 function Experience() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#021f6a">
@@ -76,7 +80,7 @@ function Experience() {
         >
           <div className="badge">
             <img src={OUSL} alt="img" />
-          </div>          
+          </div>
           <h4
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
