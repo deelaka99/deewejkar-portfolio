@@ -6,8 +6,8 @@ import { ProjectList } from "../helpers/ProjectList";
 function Projects() {
   return (
     <div className="projects">
-      <h1>My Personal Projects</h1>
-      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Web -</h2>
+      <h1 style={{color:"#021f6a",fontFamily:"sans"}}>My Personal Projects</h1>
+      <h2 style={{fontSize:"large", color:"teal", fontFamily:'cursive'}}>- Web -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Web" ? (
@@ -16,7 +16,7 @@ function Projects() {
         )}
       </div>
 
-      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Mobile -</h2>
+      <h2 style={{fontSize:"large", color:"teal", fontFamily:'cursive'}}>- Mobile -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Mobile" ? (
@@ -25,7 +25,7 @@ function Projects() {
         )}
       </div>
 
-      <h2 style={{fontSize:"large", color:"darkblue", fontFamily:'cursive'}}>- Other -</h2>
+      <h2 style={{fontSize:"large", color:"teal", fontFamily:'cursive'}}>- Other -</h2>
       <div className="projectList">
         {ProjectList.map((project, idx) =>
           project.specialization === "Code" ? (
