@@ -24,6 +24,7 @@
 /* MENU ITEM STYLING */
 
 .projectItem {
+  background-color: white;
   border-radius: 15px;
   width: 300px;
   height: 300px;

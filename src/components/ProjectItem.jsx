@@ -14,7 +14,10 @@ function ProjectItem({ image, name, id }) {
       }}
     >
       <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
-      <h1 style={{ fontSize: 'large' }} dangerouslySetInnerHTML={projectName} />
+      <h1
+        style={{ fontSize: "large", color: "#021f6a" }}
+        dangerouslySetInnerHTML={projectName}
+      />
     </div>
   );
 }
