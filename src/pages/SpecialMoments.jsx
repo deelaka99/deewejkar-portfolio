@@ -34,278 +34,278 @@ import Img23 from "../assets/specialMoments/2020_09_03.jpg";
 function Experience() {
   return (
     <div className="experience">
-      <VerticalTimeline lineColor="#3e497a">
+      <VerticalTimeline lineColor="#021f6a">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="October 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img22} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Mind blowing Vega Electric Car
           </h3>
-          <p>at Vega Innovations, Trace Expertcity, Maradana.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Vega Innovations, Trace Expertcity, Maradana.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img21} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             With my winning team of Innova 2k23
           </h3>
-          <p>at Faculty of Management Studies, SUSL.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Faculty of Management Studies, SUSL.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img20} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Award ceremony of Innova 2k23
           </h3>
-          <p>at Faculty of Management Studies, SUSL.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Faculty of Management Studies, SUSL.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img19} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             3rd Place of IT category of Innova 2k23
           </h3>
-          <p>at Faculty of Management Studies, SUSL.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Faculty of Management Studies, SUSL.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img18} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">JumborIEEE 2k23</h3>
-          <p>at Uva Wellassa University of Sri Lanka.</p>
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">JumborIEEE 2k23</h3>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Uva Wellassa University of Sri Lanka.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="May 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img17} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Mahiyanganaya School Visit
           </h3>
-          <p>IEEE Nenasa 2k23</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>IEEE Nenasa 2k23</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="April 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img16} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Manager of Media Division of SedsSabra
           </h3>
-          <p>AGM of SedsSabra 2023.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>AGM of SedsSabra 2023.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="January 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img15} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             InfoBash Cricket Tourenment
           </h3>
-          <p>at Hunduwa Ground, Sabaragamuwa University of Sri Lanka.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Hunduwa Ground, Sabaragamuwa University of Sri Lanka.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="January 2023"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img14} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Faculty of Computing's Opening Ceremony
           </h3>
-          <p>at Faculty of Computing, Sabaragamuwa University of Sri Lanka.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Faculty of Computing, Sabaragamuwa University of Sri Lanka.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="December 2022"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img13} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Volunteers of the Month
           </h3>
-          <p>IEEE Student branch of SUSL</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>IEEE Student branch of SUSL</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2021"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img12} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             The Semi-Finalists of SpaceHack 2021
           </h3>
-          <p>Organized by SedsSabra.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>Organized by SedsSabra.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="September 2020"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img23} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Student Registration Day of SUSL
           </h3>
-          <p>at Sabaragamuwa University of Sri Lanka.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Sabaragamuwa University of Sri Lanka.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="March 2020"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img11} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             End Examination Day at OUSL
           </h3>
-          <p>at The Libaray of the Open University of Sri Lanka.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at The Libaray of the Open University of Sri Lanka.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="February 2020"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img10} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Final Day as a DS Student
           </h3>
-          <p>at D.S. Senanayake College, Colombo 07.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at D.S. Senanayake College, Colombo 07.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="January 2020"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img9} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             With Open Uni friends
           </h3>
-          <p>at Weli Park, Nawala, Nugegoda.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Weli Park, Nawala, Nugegoda.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="February 2019"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img8} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             School Leavers with ICT madam
           </h3>
-          <p>at D.S. Senanayake College, Colombo 07.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at D.S. Senanayake College, Colombo 07.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="January 2019"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img7} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             A/L Results Realesed Day
           </h3>
-          <p>at D.S. Senanayake College, Colombo 07.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at D.S. Senanayake College, Colombo 07.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="January 2019"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#DCC825", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img6} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">Final day at OIT</h3>
-          <p>at Head office, OrelIT, Nawinna, Maharagama.</p>
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">Final day at OIT</h3>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Head office, OrelIT, Nawinna, Maharagama.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="December 2018"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#DCC825", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img5} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Training period of OIT
           </h3>
-          <p>at Head office, OrelIT, Nawinna, Maharagama.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Head office, OrelIT, Nawinna, Maharagama.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="August 2018"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img4} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Final day of the A/L examination
           </h3>
-          <p>at D.S. Senanayake College, Colombo 07.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at D.S. Senanayake College, Colombo 07.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="February 2017"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img3} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Senani Educational Exibition 2017
           </h3>
-          <p>at D.S. Senanayake College, Colombo 07.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at D.S. Senanayake College, Colombo 07.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="October 2016"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img2} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             Annual Prize Giving Ceremony 2015
           </h3>
-          <p>at Youth Center, Maharagama.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at Youth Center, Maharagama.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="December 2015"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <img style={{ borderRadius: "5px" }} src={Img1} alt="profileDp" />
-          <h3 className="vertical-timeline-element-title">
+          <h3 style={{ color: "#021f6a" }} className="vertical-timeline-element-title">
             After the End of O/L examination
           </h3>
-          <p>at President's College, Maharagama.</p>
+          <p style={{ color: "gray", fontFamily: "monospace" }}>at President's College, Maharagama.</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
