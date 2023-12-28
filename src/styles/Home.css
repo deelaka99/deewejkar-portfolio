@@ -40,6 +40,14 @@ img:hover {
   padding-bottom: 10px;
 }
 
+.about p{
+  text-align: center;
+  color: aliceblue;
+  font-family: monospace;
+  font-size: medium;
+  font-weight: 500;
+}
+
 .about .prompt {
   width: 40%;
   font-size: 20px;
