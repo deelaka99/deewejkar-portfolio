@@ -37,6 +37,7 @@ img:hover {
   font-size: 60px;
   color: #e9d35b;
   height: 50px;
+  padding-bottom: 10px;
 }
 
 .about .prompt {

@@ -14,6 +14,7 @@ function App() {
     <div className='App'>
       <Router>
         <Navbar/>
+        <div style={{height:"100px",}}></div>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/projects' element={<Projects/>} />
