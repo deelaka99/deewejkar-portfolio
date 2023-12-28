@@ -27,7 +27,8 @@ function Home() {
         </div>
       </div>
       <div className="skills">
-        <Languages/>
+        <Languages />
+        <Certifications />
       </div>
     </div>
   );

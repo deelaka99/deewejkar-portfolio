@@ -4,6 +4,7 @@
   justify-content: center;
   overflow: hidden;
   width: 98vw;
+  height: 40vh;
 }
 
 .slide-container {
@@ -23,6 +24,12 @@
   justify-content: "center";
 }
 
+h4{
+  font-size: larger;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
 .languageImage {
   border-radius: 0%;
   width: 100px;
@@ -32,6 +39,7 @@
 }
 
 .languageImage:hover {
+  opacity: 0.8;
   background-color: #f0f0f0;
   box-shadow: 1px 2px 8px 3px #f0f0f0;
   border: 3px solid #f0f0f0;
