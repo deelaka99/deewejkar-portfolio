@@ -48,10 +48,7 @@ function ProjectDisplay() {
 
   return (
     <div className="project">
-      <h1
-        style={{ fontFamily: "monospace", textAlign: "center" }}
-        dangerouslySetInnerHTML={projectName}
-      />
+      <h1 dangerouslySetInnerHTML={projectName} />
       <img src={project.image1} alt="project image" />
       <p>
         <b>Specialization:</b> {project.specialization}
