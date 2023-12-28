@@ -65,4 +65,8 @@ img:hover {
     font-size: 20px;
     width: 80%;
   }
+
+  .about p{
+    font-size: small;
+  }
 }

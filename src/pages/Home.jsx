@@ -12,7 +12,7 @@ function Home() {
     <div className="home">
       <div className="about">
         <img src={ProfileDP} alt="profileDp" />
-        <h2>Hi, I am Deelaka Wejth</h2>
+        <h2>Hi, I am Deelaka Wejith</h2>
         <div className="prompt">
           <p>A software developer with a passion for learning and creating.</p>
           <a href="https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/">
