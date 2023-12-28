@@ -6,6 +6,15 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
+import "../styles/Experience.css";
+import DS from "../assets/logos/ds.png";
+import PCM from "../assets/logos/pcm.png";
+import HMV from "../assets/logos/hmv.png";
+import OIT from "../assets/logos/oit.png";
+import SCAF from "../assets/logos/scaf.png";
+import OUSL from "../assets/logos/ousl.png";
+import SUSL from "../assets/logos/susl.png";
+import ESOFT from "../assets/logos/esoft.png";
 
 function Experience() {
   return (
@@ -17,18 +26,21 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
-          <h3
-            style={{ color: "#021f6a" }}
-            className="vertical-timeline-element-title"
-          >
-            Sabaragamuwa University of Sri Lanka
-          </h3>
+          <div className="badge">
+            <img src={SUSL} alt="img" />
+          </div>
           <h4
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
           >
             Faculty of Computing
           </h4>
+          <h3
+            style={{ color: "#021f6a" }}
+            className="vertical-timeline-element-title"
+          >
+            Sabaragamuwa University of Sri Lanka
+          </h3>
           <p style={{ color: "gray", fontFamily: "monospace" }}>
             Undergraduate of{" "}
             <b>
@@ -43,6 +55,9 @@ function Experience() {
           iconStyle={{ background: "#DCC825", color: "#fff" }}
           icon={<WorkIcon />}
         >
+          <div className="badge">
+            <img src={SCAF} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
@@ -59,18 +74,21 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
-          <h3
-            style={{ color: "#021f6a" }}
-            className="vertical-timeline-element-title"
-          >
-            The Open University of Sri Lanka
-          </h3>
+          <div className="badge">
+            <img src={OUSL} alt="img" />
+          </div>          
           <h4
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
           >
             Faculty of Engineering Technology
           </h4>
+          <h3
+            style={{ color: "#021f6a" }}
+            className="vertical-timeline-element-title"
+          >
+            The Open University of Sri Lanka
+          </h3>
           <p style={{ color: "gray", fontFamily: "monospace" }}>
             Undergraduate of{" "}
             <b>Bacherlor of Software Engineering (Honurs) Degree Program</b>
@@ -82,6 +100,9 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
+          <div className="badge">
+            <img src={ESOFT} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
@@ -101,14 +122,17 @@ function Experience() {
           iconStyle={{ background: "#DCC825", color: "#fff" }}
           icon={<WorkIcon />}
         >
+          <div className="badge">
+            <img src={OIT} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
           >
-            OrelIT Coperation, Nawinna, Maharagama
+            OrelIT, Nawinna, Maharagama
           </h3>
           <p style={{ color: "gray", fontFamily: "monospace" }}>
-            Worked as a <b>Associate Image Processor</b>
+            Worked as an <b>Associate Image Processor</b>
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -117,6 +141,9 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
+          <div className="badge">
+            <img src={DS} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
@@ -124,7 +151,8 @@ function Experience() {
             D.S. Senanayake College, Colombo 07
           </h3>
           <p style={{ color: "gray", fontFamily: "monospace" }}>
-            G.C.E. Advanced Level Examination (Physical science stream + ICT)
+            G.C.E. Advanced Level Examination <br />
+            (Physical science stream + ICT)
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -133,6 +161,9 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
+          <div className="badge">
+            <img src={PCM} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"
@@ -150,6 +181,9 @@ function Experience() {
           iconStyle={{ background: "#021f6a", color: "#fff" }}
           icon={<SchoolIcon />}
         >
+          <div className="badge">
+            <img src={HMV} alt="img" />
+          </div>
           <h3
             style={{ color: "#021f6a" }}
             className="vertical-timeline-element-title"

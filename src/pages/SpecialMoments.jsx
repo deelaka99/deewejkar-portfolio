@@ -32,6 +32,8 @@ import Img21 from "../assets/specialMoments/2023_09_20.jpg";
 import Img22 from "../assets/specialMoments/2023_10_13.jpg";
 import Img23 from "../assets/specialMoments/2020_09_03.jpg";
 
+import '../styles/specialMoments.css';
+
 function Experience() {
   return (
     <div className="experience">
