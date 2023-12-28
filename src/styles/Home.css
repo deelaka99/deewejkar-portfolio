@@ -2,16 +2,23 @@
   width: 100%;
   align-items: center;
   font-family: "Arial", sans-serif;
-  color: #3e497a;
+  color: #021f6a;
 }
 
-img{
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    background-color:teal;
-    box-shadow: 1px 2px 8px 3px lightblue;
-  }
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #f0f0f0;
+  background-color: #f7d022;
+  box-shadow: 1px 2px 8px 3px lightblue;
+}
+
+img:hover {
+  border: 3px solid #dbdbdb;
+  background-color: #f9d63b;
+  box-shadow: 1px 2px 8px 3px rgb(164, 217, 235);
+}
 
 .about {
   width: 100%;
@@ -21,7 +28,7 @@ img{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #21325e;
+  background-color: #021f6a;
   color: #f0f0f0;
 }
 

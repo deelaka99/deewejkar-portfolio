@@ -2,7 +2,7 @@ import React from 'react'
 import YoutubeIcon from "@mui/icons-material/YouTube";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ProfileDP from "../assets/dp1.png";
+import ProfileDP from "../assets/dp2.png";
 import "../styles/Home.css";
 
 function Home() {
