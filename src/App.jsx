@@ -1,31 +1,31 @@
-import './App.css'
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ProjectDisplay from './pages/ProjectDisplay';
-import SpecialMoments from './pages/SpecialMoments';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ProjectDisplay from "./pages/ProjectDisplay";
+import SpecialMoments from "./pages/SpecialMoments";
 import "./styles/Footer.css";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
-        <Navbar/>
-        <div style={{height:"100px",}}></div>
+        <Navbar />
+        <div style={{ height: "100px", background: "#021f6a" }}></div>
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/projects' element={<Projects/>} />
-          <Route path='/project/:id' element={<ProjectDisplay/>} />
-          <Route path='/experience' element={<Experience/>} />
-          <Route path='/special-moments' element={<SpecialMoments/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<ProjectDisplay />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/special-moments" element={<SpecialMoments />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
