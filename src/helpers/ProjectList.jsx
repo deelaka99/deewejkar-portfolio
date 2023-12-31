@@ -22,6 +22,8 @@ import ProjImg11 from "../assets/21.png";
 import ProjImg11_1 from "../assets/22.png";
 import ProjImg12 from "../assets/23.png";
 import ProjImg12_1 from "../assets/23.png";
+import ProjImg13 from "../assets/24.png";
+import ProjImg13_1 from "../assets/25.png";
 
 export const ProjectList = [
   {
@@ -88,6 +90,19 @@ export const ProjectList = [
     github: "https://github.com/deelaka99/Restaurent_Management_System",
     youtube: false,
     activelink: false,
+  },
+  {
+    name: "To Do Web App",
+    image: ProjImg13,
+    image1: ProjImg13_1,
+    skills: "HTML, CSS, JavaScript, MongoDB, Node.js, React.js, TailwindCSS",
+    specialization: "Web",
+    desc: "This project is my first MERN stack project. Acctually, it was a great pleasure to get an insightful experience when coding both frontend and backend side as a web developer.  Also, i depolyed this using Vercel. From deploying also, i got a good knowledge and experience in how to deploy the frontend part and backend part, and how to connect those two parts . Also, in here i learned about 4 APIs about get, post, put and delete.",
+    figma:
+      "https://www.figma.com/file/INFMAAJFovHI3Fot3il2Vd/MERN_TO_DO_app?type=design&node-id=0%3A1&mode=design&t=LUn9w4YU8xv54Yky-1",
+    github: "https://github.com/deelaka99/ToDoWebApp_using_MERN",
+    youtube: "https://youtu.be/x-cLwqiqQJc",
+    activelink: "https://to-do-web-app-frontend-self.vercel.app",
   },
   {
     name: "Portfolio with Dark theme",
