@@ -24,6 +24,8 @@ import ProjImg12 from "../assets/23.png";
 import ProjImg12_1 from "../assets/23.png";
 import ProjImg13 from "../assets/24.png";
 import ProjImg13_1 from "../assets/25.png";
+import ProjImg14 from "../assets/26.png";
+import ProjImg14_1 from "../assets/27.png";
 
 export const ProjectList = [
   {
@@ -139,6 +141,18 @@ export const ProjectList = [
     github: "https://github.com/deelaka99/myBioWebsite",
     youtube: false,
     activelink: "https://deelaka99.github.io/myBioWebsite/",
+  },
+  {
+    name: "Calculator app",
+    image: ProjImg14,
+    image1: ProjImg14_1,
+    skills: "HTML, CSS, JavaScript",
+    specialization: "Web",
+    desc: "This is a simple calculator which is created using HTML, CSS and JS.😉👌",
+    figma: false,
+    github: "https://github.com/deelaka99/Calculator-using-HTML-CSS-JS",
+    youtube: false,
+    activelink: "https://simple-calculator-online.netlify.app/",
   },
   {
     name: "Fit360 Fitness Tracker App",
