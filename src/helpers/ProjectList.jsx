@@ -26,6 +26,8 @@ import ProjImg13 from "../assets/24.png";
 import ProjImg13_1 from "../assets/25.png";
 import ProjImg14 from "../assets/26.png";
 import ProjImg14_1 from "../assets/27.png";
+import ProjImg15 from "../assets/28.png";
+import ProjImg15_1 from "../assets/29.png";
 
 export const ProjectList = [
   {
@@ -143,7 +145,19 @@ export const ProjectList = [
     activelink: "https://deelaka99.github.io/myBioWebsite/",
   },
   {
-    name: "Calculator app",
+    name: "Weather web app",
+    image: ProjImg15,
+    image1: ProjImg15_1,
+    skills: "ReactJS, CSS, OpenWeather API",
+    specialization: "Web",
+    desc: "A simple weather app which was created using ReactJS. Also, the weather data is fetched from the openWeatherMap API😉👌",
+    figma: false,
+    github: "https://github.com/deelaka99/weatherApp",
+    youtube: false,
+    activelink: "https://deewej-weather-app.netlify.app",
+  },
+  {
+    name: "Calculator web app",
     image: ProjImg14,
     image1: ProjImg14_1,
     skills: "HTML, CSS, JavaScript",
