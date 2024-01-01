@@ -28,6 +28,8 @@ import ProjImg14 from "../assets/26.png";
 import ProjImg14_1 from "../assets/27.png";
 import ProjImg15 from "../assets/28.png";
 import ProjImg15_1 from "../assets/29.png";
+import ProjImg16 from "../assets/30.png";
+import ProjImg16_1 from "../assets/31.png";
 
 export const ProjectList = [
   {
@@ -218,6 +220,18 @@ export const ProjectList = [
     desc: "This project, undertaken during my first year in the OUSL Python subject, represents a mini project that delves into the realms of object-oriented programming (OOP). Specifically, the project features a code-line-based interface designed for the operation of a coffee machine. Leveraging OOP concepts, I crafted a robust and efficient system that showcases my understanding and application of Python programming principles. Through this endeavor, I not only gained valuable insights into Python development but also honed my skills in designing effective and structured solutions.",
     figma: false,
     github: "https://github.com/deelaka99/Coffee-machine",
+    youtube: false,
+    activelink: false,
+  },
+  {
+    name: "Library Management System",
+    image: ProjImg16,
+    image1: ProjImg16_1,
+    skills: "C language",
+    specialization: "Code",
+    desc: "This project, undertaken during my first year in the OUSL Structured Programming subject, represents a mini project that delves into the realms of Function-oriented programming. Specifically, the project features a code-line-based interface designed for the operation of a LMS.",
+    figma: false,
+    github: "https://github.com/deelaka99/Library-Mangement-System-using-C",
     youtube: false,
     activelink: false,
   },
