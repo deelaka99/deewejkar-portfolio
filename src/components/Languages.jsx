@@ -11,7 +11,7 @@ import Node from "../assets/langauges/nodejs.png";
 import MSQL from "../assets/langauges/mysql.png";
 import Mongo from "../assets/langauges/mongodb.png";
 import Java from "../assets/langauges/java.png";
-import Python from "../assets/langauges/bootstrap.png";
+import Python from "../assets/langauges/python.png";
 import Csharp from "../assets/langauges/c sharp.png";
 import C from "../assets/langauges/c.png";
 import Android from "../assets/langauges/android.png";
