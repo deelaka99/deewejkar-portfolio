@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Sql from "../assets/certificates/sql.png";
 import Spacehack from "../assets/certificates/spacehack.png";
-import ReactCerti from "../assets/certificates/react.png";
+import ReactCerti from "../assets/certificates/reactmeta.png";
 import Python from "../assets/certificates/python.png";
 import Mongo from "../assets/certificates/mongodb.png";
 import JS from "../assets/certificates/js.png";
@@ -9,21 +9,22 @@ import Java from "../assets/certificates/java.png";
 import Illusio from "../assets/certificates/illusio.png";
 import Design from "../assets/certificates/design.png";
 import CS from "../assets/certificates/cs.png";
+import NodeJS from "../assets/certificates/node.png";
 import "../styles/Certification.css";
 
 function Certifications() {
   const certificateData = [
     {
       id: "1",
-      src: Sql,
+      src: NodeJS,
     },
     {
       id: "2",
-      src: Spacehack,
+      src: ReactCerti,
     },
     {
       id: "3",
-      src: ReactCerti,
+      src: Mongo,
     },
     {
       id: "4",
@@ -31,15 +32,15 @@ function Certifications() {
     },
     {
       id: "5",
-      src: Mongo,
-    },
-    {
-      id: "6",
       src: JS,
     },
     {
-      id: "7",
+      id: "6",
       src: Java,
+    },
+    {
+      id: "7",
+      src: Sql,
     },
     {
       id: "8",
@@ -52,6 +53,10 @@ function Certifications() {
     {
       id: "10",
       src: Design,
+    },
+    {
+      id: "11",
+      src: Spacehack,
     },
   ];
 
