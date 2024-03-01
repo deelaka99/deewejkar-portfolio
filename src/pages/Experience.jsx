@@ -27,11 +27,7 @@ function Experience() {
       title: "Knovik (Pvt) Ltd",
       subTitle: "",
       date: "2024 - Present",
-      desc: (
-        <span>
-          Working as a <b>Trainee Associate Software Engineer</b>
-        </span>
-      ),
+      desc: "Trainee Associate Software Engineer",
       type: "work",
       img: KNOVIK,
     },
@@ -39,15 +35,7 @@ function Experience() {
       title: "Faculty of Computing",
       subTitle: "Sabaragamuwa University of Sri Lanka",
       date: "2020 - present",
-      desc: (
-        <span>
-          Undergraduate of{" "}
-          <b>
-            Bacherlor of Science in Computing & Information Systems (Special)
-            Degree Program
-          </b>
-        </span>
-      ),
+      desc: "Bacherlor of Science in Computing & Information Systems (Special) Degree Program",
       type: "edu",
       img: SUSL,
     },
@@ -55,11 +43,7 @@ function Experience() {
       title: "ScafLanka Solutions",
       subTitle: "",
       date: "2020 - 2021",
-      desc: (
-        <span>
-          Worked as a <b>Junior Graphic Designer</b>
-        </span>
-      ),
+      desc: "Junior Graphic Designer",
       type: "work",
       img: SCAF,
     },
@@ -67,12 +51,7 @@ function Experience() {
       title: "Faculty of Engineering Technology",
       subTitle: "The Open University of Sri Lanka",
       date: "2019 - present",
-      desc: (
-        <span>
-          Undergraduate of{" "}
-          <b>Bacherlor of Software Engineering (Honurs) Degree Program</b>
-        </span>
-      ),
+      desc: "Bacherlor of Software Engineering (Honurs) Degree Program",
       type: "edu",
       img: OUSL,
     },
@@ -81,13 +60,11 @@ function Experience() {
       subTitle: "",
       date: "2019 - 2021",
       desc: (
-        <>
-          <p style={{ color: "gray", fontFamily: "monospace" }}>
-            Person assured Diploma in Information Technology
-            <br />
-            Person assured Diploma in English
-          </p>
-        </>
+        <span style={{ color: "gray", fontFamily: "monospace" }}>
+          Person assured Diploma in Information Technology
+          <br />
+          Person assured Diploma in English
+        </span>
       ),
       type: "edu",
       img: ESOFT,
@@ -96,11 +73,7 @@ function Experience() {
       title: "OrelIT, Nawinna, Maharagama",
       subTitle: "",
       date: "2018 - 2019",
-      desc: (
-        <span>
-          Worked as an <b>Associate Image Processor</b>
-        </span>
-      ),
+      desc: "Associate Image Processor",
       type: "work",
       img: OIT,
     },
@@ -160,7 +133,7 @@ function Experience() {
               {expSection.subTitle}
             </h3>
             <p style={{ color: "gray", fontFamily: "monospace" }}>
-              {expSection.desc}
+              <b>{expSection.desc}</b>
             </p>
           </VerticalTimelineElement>
         ))}

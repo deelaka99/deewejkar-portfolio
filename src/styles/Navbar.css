@@ -52,8 +52,8 @@
   align-items: center;
   justify-content: center;
   box-shadow: 3px 3px 10px black;
-  font-size: large;
-  padding: 20px;
+  font-size: 16px;
+  padding: 7px;
 }
 
 .cv-btn:hover {
@@ -65,7 +65,7 @@
   color: white;
   text-decoration: none;
   margin: 20px;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .navbar a:hover {
@@ -82,8 +82,9 @@
 }
 
 .toggleButton svg {
-  font-size: 50px;
+  font-size: 40px;
 }
+
 .toggleButton button {
   margin-right: 20px;
   background-color: transparent;

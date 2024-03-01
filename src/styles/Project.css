@@ -14,7 +14,7 @@
 }
 
 .projectList {
-  width: 70vw;
+  width: 83vw;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -62,9 +62,7 @@
   .projectList {
     grid-template-columns: 1fr;
   }
-}
 
-@media only screen and (max-width: 800px) {
   .projectList {
     width: 100%;
   }
