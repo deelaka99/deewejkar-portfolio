@@ -29,7 +29,7 @@ function Experience() {
       date: "2024 - Present",
       desc: (
         <span>
-          Working as a <b>Software Engineer Intern</b>
+          Working as a <b>Trainee Associate Software Engineer</b>
         </span>
       ),
       type: "work",
