@@ -55,58 +55,66 @@ const Languages = () => {
   }, [imageData.length]);
 
   return (
-    <Box sx={{ py: 8, textAlign: "center", overflow: "hidden" }}>
+    <Box
+      sx={{
+        py: { xs: 6, md: 10 },
+        textAlign: "center",
+        overflow: "hidden",
+        background: "linear-gradient(120deg, #232526 0%, #663399 100%)",
+        borderRadius: 0,
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+        mx: 0,
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        right: "50%",
+        marginLeft: "-50vw",
+        marginRight: "-50vw",
+      }}
+    >
       <Typography
-        variant="h4"
+        variant="h3"
         component="h2"
         gutterBottom
-        sx={{ mb: 6, fontWeight: "bold" }}
+        sx={{
+          mb: 2,
+          fontWeight: "bold",
+          color: "#fff",
+          letterSpacing: 1.5,
+        }}
       >
-        <Box component="span" sx={{ borderBottom: "3px solid #663399", pb: 1 }}>
-          Tech Stack
+        <Box component="span" sx={{ borderBottom: "4px solid #bb86fc", pb: 1 }}>
+          My Tech Stack
         </Box>
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        sx={{
+          color: "#e0e0e0",
+          mb: 6,
+          fontWeight: 400,
+          maxWidth: 600,
+          mx: "auto",
+        }}
+      >
+        A curated selection of technologies, frameworks, and tools I use to
+        build modern, scalable, and beautiful digital products.
       </Typography>
 
       <Box
         sx={{
           width: "100%",
-          maxWidth: 1000,
+          maxWidth: 1100,
           mx: "auto",
           position: "relative",
-          height: 180,
+          height: { xs: 180, md: 200 },
           overflow: "hidden",
         }}
       >
-        {/* Gradient Masks */}
-        <Box
-          sx={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            bottom: 0,
-            width: 100,
-            zIndex: 2,
-            background:
-              "linear-gradient(to right, #121212 0%, transparent 100%)",
-          }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            right: 0,
-            top: 0,
-            bottom: 0,
-            width: 100,
-            zIndex: 2,
-            background:
-              "linear-gradient(to left, #121212 0%, transparent 100%)",
-          }}
-        />
-
         <Box
           sx={{
             display: "flex",
-            transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+            transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
             transform: `translateX(${-currentIndex * 140 + 400}px)`,
             alignItems: "center",
             height: "100%",
@@ -115,23 +123,27 @@ const Languages = () => {
           {imageData.map((item, index) => (
             <Paper
               key={index}
-              elevation={index === currentIndex ? 8 : 1}
+              elevation={index === currentIndex ? 12 : 2}
               sx={{
                 minWidth: 120,
-                height: 140,
+                height: 150,
                 mx: 2,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                opacity: index === currentIndex ? 1 : 0.4,
+                opacity: index === currentIndex ? 1 : 0.35,
                 transform:
-                  index === currentIndex ? "scale(1.15)" : "scale(0.9)",
-                transition: "all 0.5s ease",
-                bgcolor: "rgba(255, 255, 255, 0.05)",
-                backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                borderRadius: 3,
+                  index === currentIndex ? "scale(1.18)" : "scale(0.92)",
+                transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                bgcolor: "rgba(255, 255, 255, 0.08)",
+                backdropFilter: "blur(14px)",
+                border: "1.5px solid rgba(255, 255, 255, 0.13)",
+                borderRadius: 4,
+                boxShadow:
+                  index === currentIndex
+                    ? "0 8px 24px rgba(102,51,153,0.18)"
+                    : "0 2px 8px rgba(0,0,0,0.08)",
               }}
             >
               <Box
@@ -139,21 +151,26 @@ const Languages = () => {
                 src={item.ImageSrc}
                 alt={item.ImageName}
                 sx={{
-                  width: 60,
-                  height: 60,
+                  width: 64,
+                  height: 64,
                   objectFit: "contain",
-                  mb: 1.5,
-                  filter: index === currentIndex ? "none" : "grayscale(100%)",
+                  mb: 2,
+                  filter:
+                    index === currentIndex
+                      ? "none"
+                      : "grayscale(100%) blur(1px)",
+                  transition: "filter 0.4s",
                 }}
               />
               <Typography
-                variant="body2"
+                variant="body1"
                 sx={{
-                  fontWeight: "bold",
-                  color:
-                    index === currentIndex
-                      ? "secondary.light"
-                      : "text.disabled",
+                  fontWeight: 700,
+                  color: index === currentIndex ? "#bb86fc" : "#bdbdbd",
+                  letterSpacing: 0.5,
+                  fontSize: { xs: "1rem", md: "1.08rem" },
+                  textShadow:
+                    index === currentIndex ? "0 2px 8px #66339922" : "none",
                 }}
               >
                 {item.ImageName}
