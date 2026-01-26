@@ -33,9 +33,14 @@ const ProjectsPage = () => {
           component="h1"
           align="center"
           gutterBottom
-          sx={{ mb: 6, fontWeight: "bold", color: "primary.main" }}
+          sx={{ mb: 6, fontWeight: "bold", color: "#fff", letterSpacing: 1.5 }}
         >
-          My Projects
+          <Box
+            component="span"
+            sx={{ borderBottom: "4px solid #bb86fc", pb: 1 }}
+          >
+            My Projects
+          </Box>
         </Typography>
 
         <Box
