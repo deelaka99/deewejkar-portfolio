@@ -5,6 +5,8 @@ import {
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
   YouTube as YouTubeIcon,
+  Facebook as FacebookIcon,
+  Instagram as InstagramIcon,
 } from "@mui/icons-material";
 import ProfileDP from "../images/dp2.png";
 
@@ -48,8 +50,6 @@ const Hero = () => {
         alignItems: "center",
         position: "relative",
         overflow: "hidden",
-        background:
-          "radial-gradient(circle at 80% 20%, rgba(102, 51, 153, 0.15) 0%, rgba(18, 18, 18, 0) 50%)",
       }}
     >
       <Container maxWidth="lg">
@@ -77,7 +77,7 @@ const Hero = () => {
                   display: "block",
                 }}
               >
-                SOFTWARE DEVELOPER
+                SOFTWARE ENGINEER
               </Typography>
               <Typography
                 variant="h1"
@@ -129,7 +129,7 @@ const Hero = () => {
                 <Button
                   variant="contained"
                   size="large"
-                  href="mailto:deelakawejith@gmail.com"
+                  href="mailto:123deelaka@gmail.com"
                   sx={{
                     borderRadius: "30px",
                     px: 4,
@@ -172,6 +172,22 @@ const Hero = () => {
                   style={{ color: "inherit" }}
                 >
                   <LinkedInIcon fontSize="large" />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#0037ff" }}
+                  href="https://www.facebook.com/deelaka.kariyawasam?mibextid=wwXIfr&mibextid=wwXIfr"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
+                  <FacebookIcon fontSize="large" />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#c300ff" }}
+                  href="https://www.instagram.com/deelaka_wk?igsh=NXd5b3UweWRkd2Vh&utm_source=qr"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
+                  <InstagramIcon fontSize="large" />
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.2, color: "#FF0000" }}
