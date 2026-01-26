@@ -277,9 +277,14 @@ const SpecialMomentsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           align="center"
           gutterBottom
-          sx={{ mb: 6, fontWeight: "bold", color: "primary.main" }}
+          sx={{ mb: 6, fontWeight: "bold", color: "#fff", letterSpacing: 1.5 }}
         >
-          Special Moments
+          <Box
+            component="span"
+            sx={{ borderBottom: "4px solid #bb86fc", pb: 1 }}
+          >
+            Special Moments
+          </Box>
         </Typography>
 
         {/* Desktop View */}
@@ -314,7 +319,7 @@ const SpecialMomentsPage = () => {
                   sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }}
                 />
                 <TimelineDot
-                  color={moment.type === "edu" ? "primary" : "secondary"}
+                  color="primary"
                   sx={{ boxShadow: "0 0 10px rgba(102, 51, 153, 0.3)" }}
                 >
                   {moment.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
