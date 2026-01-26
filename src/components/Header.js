@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   IconButton,
   Drawer,
@@ -12,6 +11,7 @@ import {
   ListItemButton,
   ListItemText,
   Box,
+  Avatar,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -38,12 +38,22 @@ const Header = () => {
 
   const drawerContent = (
     <Box
-      sx={{ width: 250, bgcolor: "background.paper", height: "100%" }}
+      sx={{
+        width: 270,
+        bgcolor: "rgba(30,30,30,0.95)",
+        height: "100%",
+        boxShadow: 6,
+        borderTopLeftRadius: 24,
+        borderBottomLeftRadius: 24,
+        p: 0,
+        display: "flex",
+        flexDirection: "column",
+      }}
       role="presentation"
     >
-      <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 }}>
+      <Box sx={{ display: "flex", justifyContent: "flex-end", p: 2 }}>
         <IconButton onClick={handleDrawerToggle}>
-          <CloseIcon />
+          <CloseIcon sx={{ color: "white" }} />
         </IconButton>
       </Box>
       <List>
@@ -53,34 +63,43 @@ const Header = () => {
               component={Link}
               to={item.link}
               onClick={handleDrawerToggle}
-              sx={{ textAlign: "center" }}
+              sx={{
+                textAlign: "right",
+                color: "white",
+                borderRadius: 2,
+                mx: 2,
+                my: 0.5,
+                fontWeight: 500,
+                "&:hover": {
+                  bgcolor: "rgba(255,255,255,0.08)",
+                  color: "primary.main",
+                },
+              }}
             >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem disablePadding>
-          <ListItemButton
-            component="a"
-            href={googleDriveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              justifyContent: "center",
-              mt: 2,
-              mx: 2,
-              bgcolor: "primary.main",
-              borderRadius: 1,
-              "&:hover": { bgcolor: "primary.dark" },
-            }}
-          >
-            <ListItemText
-              primary="Download CV"
-              sx={{ color: "white", textAlign: "center" }}
-            />
-          </ListItemButton>
-        </ListItem>
       </List>
+      <Box sx={{ p: 2 }}>
+        <Button
+          fullWidth
+          variant="contained"
+          color="primary"
+          href={googleDriveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            fontWeight: 600,
+            borderRadius: 2,
+            py: 1.2,
+            fontSize: "1rem",
+            boxShadow: 3,
+          }}
+        >
+          Download CV
+        </Button>
+      </Box>
     </Box>
   );
 
@@ -91,35 +110,51 @@ const Header = () => {
         color="transparent"
         elevation={0}
         sx={{
-          bgcolor: "rgba(30, 30, 30, 0.7)",
-          backdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+          bgcolor: "rgba(30, 30, 30, 0.55)",
+          backdropFilter: "blur(16px)",
+          borderBottom: "1.5px solid rgba(255, 255, 255, 0.08)",
           transition: "all 0.3s ease",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
         }}
       >
-        <Toolbar>
-          <Typography
-            variant="h6"
+        <Toolbar sx={{ minHeight: 72, px: { xs: 2, sm: 6 } }}>
+          <Box
             component={Link}
             to="/"
             sx={{
-              flexGrow: 1,
+              display: "flex",
+              alignItems: "center",
               textDecoration: "none",
-              color: "text.primary",
-              fontWeight: "bold",
+              flexGrow: 1,
+              gap: 1.5,
             }}
           >
-            DeeWejkar
-          </Typography>
+            <Avatar
+              alt="DeeWejkar Logo"
+              sx={{
+                width: 40,
+                height: 40,
+                bgcolor: "primary.main",
+                color: "#fff",
+                fontWeight: 500,
+                fontSize: 18,
+                boxShadow: 2,
+                letterSpacing: 1,
+              }}
+            >
+              DK
+            </Avatar>
+          </Box>
 
           {isMobile ? (
             <IconButton
               color="inherit"
               aria-label="open drawer"
-              edge="start"
+              edge="end"
               onClick={handleDrawerToggle}
+              sx={{ ml: 1 }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: "white", fontSize: 32 }} />
             </IconButton>
           ) : (
             <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
@@ -129,7 +164,21 @@ const Header = () => {
                   component={Link}
                   to={item.link}
                   color="inherit"
-                  sx={{ textTransform: "none", fontSize: "1rem" }}
+                  sx={{
+                    textTransform: "none",
+                    fontSize: "1.08rem",
+                    fontWeight: 500,
+                    px: 2,
+                    py: 1.2,
+                    borderRadius: 2,
+                    color: "white",
+                    letterSpacing: 0.5,
+                    transition: "all 0.2s",
+                    "&:hover": {
+                      bgcolor: "rgba(255,255,255,0.08)",
+                      color: "primary.main",
+                    },
+                  }}
                 >
                   {item.name}
                 </Button>
@@ -140,6 +189,15 @@ const Header = () => {
                 href={googleDriveLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                sx={{
+                  fontWeight: 700,
+                  borderRadius: 2,
+                  px: 3,
+                  py: 1.2,
+                  fontSize: "1.08rem",
+                  boxShadow: 3,
+                  ml: 1,
+                }}
               >
                 Download CV
               </Button>
@@ -157,7 +215,14 @@ const Header = () => {
         }}
         sx={{
           display: { xs: "block", md: "none" },
-          "& .MuiDrawer-paper": { boxSizing: "border-box", width: 250 },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: 270,
+            bgcolor: "rgba(30,30,30,0.95)",
+            borderTopLeftRadius: 24,
+            borderBottomLeftRadius: 24,
+            p: 0,
+          },
         }}
       >
         {drawerContent}
