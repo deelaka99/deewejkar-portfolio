@@ -47,6 +47,8 @@ const Languages = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(1100);
+  const carouselRef = React.useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,6 +56,18 @@ const Languages = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [imageData.length]);
+
+  // Measure container width on client only
+  useEffect(() => {
+    function updateWidth() {
+      if (carouselRef.current) {
+        setContainerWidth(carouselRef.current.offsetWidth);
+      }
+    }
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   return (
     <Box
@@ -113,27 +127,18 @@ const Languages = () => {
         }}
       >
         <Box
-          sx={(theme) => {
-            // Responsive centering logic
-            const itemWidth = 140;
-            const containerWidth =
-              window.innerWidth < theme.breakpoints.values.md
-                ? window.innerWidth
-                : 1100;
-            const centerOffset = containerWidth / 2 - itemWidth / 2;
-            return {
-              display: "flex",
-              transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
-              transform: `translateX(${-currentIndex * itemWidth + centerOffset}px)`,
-              alignItems: "center",
-              height: "100%",
-            };
+          ref={carouselRef}
+          sx={{
+            display: "flex",
+            transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+            transform: `translateX(${-currentIndex * 140 + (containerWidth / 2 - 70)}px)`,
+            alignItems: "center",
+            height: "100%",
           }}
         >
           {imageData.map((item, index) => (
             <Paper
               key={index}
-              elevation={index === currentIndex ? 12 : 2}
               sx={{
                 minWidth: 120,
                 height: 150,
