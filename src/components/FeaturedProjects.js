@@ -23,20 +23,6 @@ const FeaturedProjects = () => {
         >
           <Box>
             <Typography
-              variant="overline"
-              component={motion.span}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              sx={{
-                color: "secondary.main",
-                fontWeight: "bold",
-                letterSpacing: 2,
-              }}
-            >
-              PORTFOLIO
-            </Typography>
-            <Typography
               variant="h3"
               component={motion.h2}
               initial={{ opacity: 0, y: 20 }}
@@ -62,7 +48,7 @@ const FeaturedProjects = () => {
           </Button>
         </Box>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={5}>
           {featuredProjects.map((project, index) => (
             <Grid
               item
@@ -70,9 +56,13 @@ const FeaturedProjects = () => {
               md={4}
               key={project.id}
               component={motion.div}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 40, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                delay: index * 0.13,
+                duration: 0.7,
+                ease: "easeOut",
+              }}
               viewport={{ once: true }}
             >
               <ProjectItem
@@ -88,7 +78,7 @@ const FeaturedProjects = () => {
           sx={{
             display: { xs: "flex", md: "none" },
             justifyContent: "center",
-            mt: 4,
+            mt: 5,
           }}
         >
           <Button
@@ -96,6 +86,22 @@ const FeaturedProjects = () => {
             to="/projects"
             variant="outlined"
             endIcon={<ArrowForwardIcon />}
+            sx={{
+              fontWeight: 700,
+              borderRadius: 3,
+              px: 3,
+              py: 1.2,
+              borderColor: "#bb86fc",
+              color: "#bb86fc",
+              textTransform: "none",
+              fontSize: "1.08rem",
+              transition: "all 0.2s",
+              "&:hover": {
+                borderColor: "#663399",
+                color: "#663399",
+                background: "#f3eaff",
+              },
+            }}
           >
             View All Projects
           </Button>
