@@ -8,7 +8,7 @@ import {
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
 } from "@mui/icons-material";
-import ProfileDP from "../images/dp2.png";
+import ProfileDP from "../images/dp1.jpg";
 
 const Hero = () => {
   // Floating animation for the image
@@ -240,11 +240,17 @@ const Hero = () => {
                 alt="Deelaka Kariyawasam"
                 sx={{
                   width: { xs: 280, md: 400 },
-                  height: { xs: 280, md: 400 },
-                  borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%", // Organic shape
+                  height: { xs: 320, md: 440 },
+                  borderRadius: {
+                    xs: "38% 62% 60% 40% / 40% 40% 60% 60%",
+                    md: "30% 70% 70% 30% / 30% 30% 70% 70%",
+                  },
                   objectFit: "cover",
+                  objectPosition: "top center",
                   boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
                   border: "2px solid rgba(255,255,255,0.1)",
+                  background: "#fff",
+                  transition: "border-radius 0.6s cubic-bezier(0.4,0,0.2,1)",
                 }}
               />
             </motion.div>
