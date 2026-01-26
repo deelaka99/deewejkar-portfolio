@@ -59,7 +59,7 @@ const Hero = () => {
           alignItems="center"
           direction={{ xs: "column-reverse", md: "row" }}
         >
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6} lg={7}>
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -86,7 +86,7 @@ const Hero = () => {
                 sx={{
                   fontWeight: 800,
                   mb: 2,
-                  fontSize: { xs: "2.5rem", md: "4rem" },
+                  fontSize: { xs: "2.5rem", md: "3.5rem" },
                   lineHeight: 1.1,
                 }}
               >
@@ -100,7 +100,7 @@ const Hero = () => {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Deelaka Wejith
+                  Deelaka Kariyawasam
                 </Box>
               </Typography>
               <Typography
@@ -115,8 +115,10 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Crafting exceptional digital experiences with a focus on
-                accessibility, performance, and modern aesthetics.
+                Passionate about building innovative web solutions with
+                integrated AI/ML capabilities—accessible, lightning-fast, and
+                visually stunning—empowering users and elevating brands in the
+                digital world.
               </Typography>
 
               <Stack
@@ -204,7 +206,8 @@ const Hero = () => {
           <Grid
             item
             xs={12}
-            md={5}
+            md={6}
+            lg={5}
             sx={{
               display: "flex",
               justifyContent: "center",
