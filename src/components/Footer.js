@@ -5,6 +5,7 @@ import {
   LinkedIn as LinkedInIcon,
   YouTube as YouTubeIcon,
   Facebook as FacebookIcon,
+  Instagram as InstagramIcon,
 } from "@mui/icons-material";
 
 const Footer = () => {
@@ -12,18 +13,27 @@ const Footer = () => {
     {
       icon: <FacebookIcon fontSize="large" />,
       url: "https://web.facebook.com/deelaka.kariyawasam/?locale=ms_MY&_rdc=1&_rdr",
+      color: "#1877F3",
+    },
+    {
+      icon: <InstagramIcon fontSize="large" />,
+      url: "https://www.instagram.com/deelaka_wk?igsh=NXd5b3UweWRkd2Vh&utm_source=qr",
+      color: "#E1306C",
     },
     {
       icon: <LinkedInIcon fontSize="large" />,
       url: "https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/",
+      color: "#0077b5",
     },
     {
       icon: <GitHubIcon fontSize="large" />,
       url: "https://github.com/deelaka99",
+      color: "#333",
     },
     {
       icon: <YouTubeIcon fontSize="large" />,
       url: "https://www.youtube.com/@deelakawejithkariyawasam",
+      color: "#FF0000",
     },
   ];
 
@@ -31,7 +41,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        py: 3,
+        py: 4,
         px: 2,
         mt: "auto",
         backgroundColor: (theme) =>
@@ -41,7 +51,7 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="sm">
-        <Stack direction="row" spacing={2} justifyContent="center" mb={2}>
+        <Stack direction="row" spacing={3} justifyContent="center" mb={2}>
           {socialLinks.map((link, index) => (
             <IconButton
               key={index}
@@ -49,20 +59,32 @@ const Footer = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              color="inherit"
               sx={{
-                transition: "color 0.3s",
-                "&:hover": { color: "primary.main" },
+                color: "#fff",
+                background: "rgba(102,51,153,0.08)",
+                borderRadius: 2,
+                boxShadow: "0 2px 8px #66339922",
+                transition: "all 0.3s",
+                p: 1.2,
+                "&:hover": {
+                  color: link.color,
+                  background: "rgba(255,255,255,0.18)",
+                  boxShadow: `0 4px 16px ${link.color}44`,
+                  transform: "scale(1.15)",
+                },
               }}
             >
               {link.icon}
             </IconButton>
           ))}
         </Stack>
-        <Typography variant="body2" color="text.secondary" align="center">
+        <Typography
+          variant="body2"
+          align="center"
+          sx={{ color: "#e0e0e0", letterSpacing: 0.5 }}
+        >
           {"© "}
-          {new Date().getFullYear()}
-          {" PDW Kariyawasam. All rights reserved."}
+          {new Date().getFullYear()} {" PDW Kariyawasam. All rights reserved."}
         </Typography>
       </Container>
     </Box>
