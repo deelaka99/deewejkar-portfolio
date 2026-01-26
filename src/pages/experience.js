@@ -254,9 +254,7 @@ const ExperiencePage = () => {
             {expDetails.map((exp, index) => (
               <TimelineItem key={index}>
                 <TimelineSeparator>
-                  <TimelineDot
-                    color={exp.type === "edu" ? "primary" : "secondary"}
-                  >
+                  <TimelineDot color="primary">
                     {exp.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
                   </TimelineDot>
                   <TimelineConnector />
@@ -294,6 +292,7 @@ const ExperiencePage = () => {
                           height: 30,
                           mr: 1,
                           bgcolor: "transparent",
+                          borderRadius: 2,
                         }}
                         imgProps={{ style: { objectFit: "contain" } }}
                         variant="square"

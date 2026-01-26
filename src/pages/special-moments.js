@@ -393,9 +393,7 @@ const SpecialMomentsPage = () => {
             {spMomentDetails.map((moment, index) => (
               <TimelineItem key={index}>
                 <TimelineSeparator>
-                  <TimelineDot
-                    color={moment.type === "edu" ? "primary" : "secondary"}
-                  >
+                  <TimelineDot color="primary">
                     {moment.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
                   </TimelineDot>
                   <TimelineConnector />
