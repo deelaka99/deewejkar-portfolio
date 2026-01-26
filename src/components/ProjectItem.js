@@ -80,7 +80,12 @@ const ProjectItem = ({ image, name, id }) => {
           <Typography
             gutterBottom
             variant="h6"
-            sx={{ fontWeight: "bold", color: "primary.light", mb: 0 }}
+            sx={{
+              fontWeight: "bold",
+              color: "primary.light",
+              mb: 0,
+              textAlign: "center",
+            }}
           >
             {name}
           </Typography>
