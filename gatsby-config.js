@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `DeeWejkar Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -12,20 +12,20 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-material-ui",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        name: "images",
+        path: "./src/images/",
       },
-      __key: "images"
+      __key: "images",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
+        name: "pages",
+        path: "./src/pages/",
       },
-      __key: "pages"
-    }
-  ]
+      __key: "pages",
+    },
+  ],
 };
