@@ -204,7 +204,10 @@ const ExperiencePage = () => {
                         bgcolor: "transparent",
                         borderRadius: 2,
                       }}
-                      imgProps={{ style: { objectFit: "contain" } }}
+                      imgProps={{
+                        style: { objectFit: "contain" },
+                        loading: "lazy",
+                      }}
                       variant="square"
                     />
                     <Box>
@@ -294,7 +297,10 @@ const ExperiencePage = () => {
                           bgcolor: "transparent",
                           borderRadius: 2,
                         }}
-                        imgProps={{ style: { objectFit: "contain" } }}
+                        imgProps={{
+                          style: { objectFit: "contain" },
+                          loading: "lazy",
+                        }}
                         variant="square"
                       />
                       <Typography

@@ -72,6 +72,7 @@ const ProjectDetails = ({ pageContext, data }) => {
             component="img"
             src={project.image}
             alt={project.name}
+            loading="lazy"
             sx={{
               maxWidth: "100%",
               height: "auto",

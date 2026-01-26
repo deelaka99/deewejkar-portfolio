@@ -165,6 +165,7 @@ const Languages = () => {
                 component="img"
                 src={item.ImageSrc}
                 alt={item.ImageName}
+                loading="lazy"
                 sx={{
                   width: 64,
                   height: 64,

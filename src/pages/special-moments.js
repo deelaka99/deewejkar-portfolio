@@ -347,6 +347,7 @@ const SpecialMomentsPage = () => {
                     component="img"
                     src={moment.img}
                     alt="moment"
+                    loading="lazy"
                     sx={{ width: "100%", height: 250, objectFit: "cover" }}
                   />
                   <Box sx={{ p: 2.5 }}>
@@ -412,6 +413,7 @@ const SpecialMomentsPage = () => {
                       component="img"
                       src={moment.img}
                       alt="moment"
+                      loading="lazy"
                       sx={{ width: "100%", height: 150, objectFit: "cover" }}
                     />
                     <Box sx={{ p: 2 }}>
