@@ -33,6 +33,7 @@ const Languages = () => {
     { ImageName: "PHP", ImageSrc: PHP },
     { ImageName: "Laravel", ImageSrc: Laraval },
     { ImageName: "Java", ImageSrc: Java },
+    { ImageName: "C", ImageSrc: C },
     { ImageName: "Python", ImageSrc: Python },
     { ImageName: "C#", ImageSrc: Csharp },
     { ImageName: "MySQL", ImageSrc: MSQL },
@@ -60,16 +61,16 @@ const Languages = () => {
         py: { xs: 6, md: 10 },
         textAlign: "center",
         overflow: "hidden",
-        background: "linear-gradient(120deg, #232526 0%, #663399 100%)",
+        background: { md: "linear-gradient(120deg, #232526 0%, #663399 100%)" },
         borderRadius: 0,
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+        boxShadow: { md: "0 8px 32px 0 rgba(31, 38, 135, 0.15)" },
         mx: 0,
-        width: "100vw",
-        position: "relative",
-        left: "50%",
-        right: "50%",
-        marginLeft: "-50vw",
-        marginRight: "-50vw",
+        width: { xs: "100%", md: "100vw" },
+        position: { md: "relative" },
+        left: { md: "50%" },
+        right: { md: "50%" },
+        marginLeft: { md: "-50vw" },
+        marginRight: { md: "-50vw" },
       }}
     >
       <Typography
@@ -112,12 +113,21 @@ const Languages = () => {
         }}
       >
         <Box
-          sx={{
-            display: "flex",
-            transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
-            transform: `translateX(${-currentIndex * 140 + 400}px)`,
-            alignItems: "center",
-            height: "100%",
+          sx={(theme) => {
+            // Responsive centering logic
+            const itemWidth = 140;
+            const containerWidth =
+              window.innerWidth < theme.breakpoints.values.md
+                ? window.innerWidth
+                : 1100;
+            const centerOffset = containerWidth / 2 - itemWidth / 2;
+            return {
+              display: "flex",
+              transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+              transform: `translateX(${-currentIndex * itemWidth + centerOffset}px)`,
+              alignItems: "center",
+              height: "100%",
+            };
           }}
         >
           {imageData.map((item, index) => (
