@@ -30,7 +30,23 @@ const ExperiencePage = () => {
     {
       title: "Knovik (Pvt) Ltd",
       subTitle: "",
-      date: "2024 - Present",
+      date: "2025 Oct - Present",
+      desc: "Associate Software Engineer - R&D Lead",
+      type: "work",
+      img: KNOVIK,
+    },
+    {
+      title: "Knovik (Pvt) Ltd",
+      subTitle: "",
+      date: "2024 Aug - 2025 Oct",
+      desc: "Associate Software Engineer",
+      type: "work",
+      img: KNOVIK,
+    },
+    {
+      title: "Knovik (Pvt) Ltd",
+      subTitle: "",
+      date: "2024 Feb - 2024 Aug",
       desc: "Trainee Associate Software Engineer",
       type: "work",
       img: KNOVIK,
@@ -38,7 +54,7 @@ const ExperiencePage = () => {
     {
       title: "Faculty of Computing",
       subTitle: "Sabaragamuwa University of Sri Lanka",
-      date: "2020 - present",
+      date: "2020 - 2025",
       desc: "Bacherlor of Science in Computing & Information Systems (Special) Degree Program",
       type: "edu",
       img: SUSL,
@@ -111,9 +127,14 @@ const ExperiencePage = () => {
           animate={{ opacity: 1, y: 0 }}
           align="center"
           gutterBottom
-          sx={{ mb: 6, fontWeight: "bold", color: "primary.main" }}
+          sx={{ mb: 6, fontWeight: "bold", color: "#fff", letterSpacing: 1.5 }}
         >
-          Experience
+          <Box
+            component="span"
+            sx={{ borderBottom: "4px solid #bb86fc", pb: 1 }}
+          >
+            Experience
+          </Box>
         </Typography>
 
         <Timeline
@@ -148,7 +169,7 @@ const ExperiencePage = () => {
                   sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }}
                 />
                 <TimelineDot
-                  color={exp.type === "edu" ? "primary" : "secondary"}
+                  color="primary"
                   sx={{ boxShadow: "0 0 10px rgba(102, 51, 153, 0.5)" }}
                 >
                   {exp.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
@@ -181,6 +202,7 @@ const ExperiencePage = () => {
                         width: 50,
                         height: 50,
                         bgcolor: "transparent",
+                        borderRadius: 2,
                       }}
                       imgProps={{ style: { objectFit: "contain" } }}
                       variant="square"
