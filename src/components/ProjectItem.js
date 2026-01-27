@@ -3,12 +3,12 @@ import { Link } from "gatsby";
 import {
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
   Typography,
   Box,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import LazyImage from "./LazyImage";
 
 // Create a motion component for the Card
 const MotionCard = motion(Card);
@@ -34,17 +34,15 @@ const ProjectItem = ({ image, name, id }) => {
         sx={{ flexGrow: 1 }}
       >
         <Box sx={{ position: "relative", overflow: "hidden" }}>
-          <CardMedia
-            component="div"
+          <LazyImage
+            src={image}
+            alt={name}
+            height={200}
+            width="100%"
+            objectFit="cover"
             sx={{
-              height: 200,
-              width: "100%",
-              backgroundImage: `url(${image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
               transition: "transform 0.5s ease",
             }}
-            className="project-media"
           />
           {/* Hover Overlay */}
           <Box
@@ -67,10 +65,7 @@ const ProjectItem = ({ image, name, id }) => {
               zIndex: 1,
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{ color: "white", fontWeight: "bold" }}
-            >
+            <Typography sx={{ color: "white", fontWeight: "bold" }}>
               View Project
             </Typography>
           </Box>

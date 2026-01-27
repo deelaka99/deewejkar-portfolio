@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import ProjectItem from "../components/ProjectItem";
 import { ProjectList } from "../helpers/ProjectList";
+import Seo from "../components/SEO";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
 
@@ -76,4 +77,10 @@ const ProjectsPage = () => {
 
 export default ProjectsPage;
 
-export const Head = () => <title>Projects | DeeWejkar</title>;
+export const Head = () => (
+  <Seo
+    title="Web & Mobile App Projects | Deelaka Kariyawasam"
+    description="Explore my portfolio of web applications, mobile apps, and software projects. Built with React, Node.js, Firebase, and modern web technologies."
+    pathname="/projects/"
+  />
+);

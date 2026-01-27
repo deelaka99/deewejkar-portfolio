@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Languages from "../components/Languages";
 import FeaturedProjects from "../components/FeaturedProjects";
+import Seo from "../components/SEO";
 import { Box } from "@mui/material";
 
 const IndexPage = () => {
@@ -22,4 +23,9 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home | DeeWejkar</title>;
+export const Head = () => (
+  <Seo
+    title="Deelaka Kariyawasam - Full Stack Developer | Portfolio"
+    description="Full Stack Developer specializing in React, Node.js, and mobile development. Explore my portfolio of web applications, mobile apps, and software projects."
+  />
+);
