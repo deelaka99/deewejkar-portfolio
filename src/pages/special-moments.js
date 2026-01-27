@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/SEO";
 import { Typography, Container, Box, Paper } from "@mui/material";
 import {
   Timeline,
@@ -458,4 +459,10 @@ const SpecialMomentsPage = () => {
 
 export default SpecialMomentsPage;
 
-export const Head = () => <title>Special Moments | DeeWejkar</title>;
+export const Head = () => (
+  <Seo
+    title="Special Moments & Achievements | Deelaka Kariyawasam"
+    description="Explore the special moments, achievements, professional journey and milestones of Deelaka Kariyawasam."
+    pathname="/special-moments/"
+  />
+);
