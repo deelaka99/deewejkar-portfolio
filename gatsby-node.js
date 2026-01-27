@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 
 exports.createPages = async ({ actions }) => {
@@ -18,4 +19,16 @@ exports.createPages = async ({ actions }) => {
       },
     });
   });
+};
+
+exports.onPostBuild = () => {
+  const publicPath = path.join(__dirname, "public");
+  const sitemapSrc = path.join(publicPath, "sitemap-0.xml");
+  const sitemapDest = path.join(publicPath, "sitemap.xml");
+
+  // Copy sitemap-0.xml to sitemap.xml
+  if (fs.existsSync(sitemapSrc)) {
+    fs.copyFileSync(sitemapSrc, sitemapDest);
+    console.log("✓ Created sitemap.xml from sitemap-0.xml");
+  }
 };
