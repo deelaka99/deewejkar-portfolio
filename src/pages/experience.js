@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/SEO";
 import { Typography, Container, Box, Avatar, Paper } from "@mui/material";
 import {
   Timeline,
@@ -331,4 +332,10 @@ const ExperiencePage = () => {
 
 export default ExperiencePage;
 
-export const Head = () => <title>Experience | DeeWejkar</title>;
+export const Head = () => (
+  <Seo
+    title="Experience & Education | Deelaka Kariyawasam"
+    description="Professional experience and educational background of Deelaka Kariyawasam - Associate Software Engineer with expertise in full-stack development."
+    pathname="/experience/"
+  />
+);
