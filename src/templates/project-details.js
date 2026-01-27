@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/SEO";
 import {
   Container,
   Typography,
-  Box,
   Chip,
   Stack,
   Button,
@@ -16,6 +16,7 @@ import {
 } from "@mui/icons-material";
 import { ProjectList } from "../helpers/ProjectList";
 import { motion } from "framer-motion";
+import LazyImage from "../components/LazyImage";
 
 import { graphql } from "gatsby";
 
@@ -62,22 +63,16 @@ const ProjectDetails = ({ pageContext, data }) => {
             overflow: "hidden",
             borderRadius: 2,
             mb: 4,
-            maxHeight: 500,
-            display: "flex",
-            justifyContent: "center",
             bgcolor: "background.default",
           }}
         >
-          <Box
-            component="img"
+          <LazyImage
             src={project.image}
             alt={project.name}
-            loading="lazy"
-            sx={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "contain",
-            }}
+            height={500}
+            width="100%"
+            objectFit="contain"
+            borderRadius={2}
           />
         </Paper>
 
@@ -179,6 +174,25 @@ const ProjectDetails = ({ pageContext, data }) => {
 };
 
 export default ProjectDetails;
+
+export const Head = ({ pageContext }) => {
+  const { id } = pageContext;
+  const project = ProjectList.find((p) => p.id === id);
+
+  if (!project) {
+    return <Seo title="Project Not Found" />;
+  }
+
+  return (
+    <Seo
+      title={`${project.name} | Deelaka Kariyawasam`}
+      description={project.desc.substring(0, 155)}
+      pathname={`/project/${id}/`}
+      image={project.image}
+      article={true}
+    />
+  );
+};
 
 export const query = graphql`
   query {
