@@ -4,7 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `DeeWejkar Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    description: `Portfolio website showcasing web development and mobile app projects by Deelaka Kariyawasam`,
+    author: `Deelaka Kariyawasam`,
+    siteUrl: `https://www.deelakakariyawasam.dev`,
   },
   plugins: [
     "gatsby-plugin-image",
