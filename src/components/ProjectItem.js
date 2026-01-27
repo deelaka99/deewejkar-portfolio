@@ -65,10 +65,7 @@ const ProjectItem = ({ image, name, id }) => {
               zIndex: 1,
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{ color: "white", fontWeight: "bold" }}
-            >
+            <Typography sx={{ color: "white", fontWeight: "bold" }}>
               View Project
             </Typography>
           </Box>
