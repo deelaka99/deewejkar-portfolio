@@ -169,7 +169,7 @@ const Hero = () => {
               >
                 <motion.a
                   whileHover={{ scale: 1.2, color: "#0077b5" }}
-                  href="https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/"
+                  href="https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213"
                   target="_blank"
                   style={{ color: "inherit" }}
                 >

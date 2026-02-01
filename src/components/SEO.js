@@ -44,7 +44,7 @@ const SEO = ({
     url: site.siteMetadata.siteUrl,
     sameAs: [
       "https://github.com/deelaka99",
-      "https://www.linkedin.com/in/deelaka-kariyawasam",
+      "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
     ],
     knowsAbout: [
       "Web Development",

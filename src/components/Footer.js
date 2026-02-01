@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       icon: <LinkedInIcon fontSize="large" />,
-      url: "https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/",
+      url: "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
       color: "#0077b5",
     },
     {
