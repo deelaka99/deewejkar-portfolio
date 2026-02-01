@@ -21,7 +21,18 @@ import { motion } from "framer-motion";
 import LazyImage from "../components/LazyImage";
 import { fetchProjects } from "../store/actions/projectsActions";
 
-function ProjectDetail({ id }) {
+// Utility function to create URL-friendly slug
+const slugify = (text) => {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+};
+
+function ProjectDetail({ slug }) {
   const dispatch = useDispatch();
   const { projectList, projectLoading, error } = useSelector(
     (state) => state.projectsReducer,
@@ -33,7 +44,7 @@ function ProjectDetail({ id }) {
     }
   }, [dispatch, projectList, projectLoading]);
 
-  const project = projectList?.data?.find((p) => p.id === id);
+  const project = projectList?.data?.find((p) => slugify(p.name) === slug);
 
   if (projectLoading) {
     return (

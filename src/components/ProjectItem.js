@@ -13,7 +13,20 @@ import LazyImage from "./LazyImage";
 // Create a motion component for the Card
 const MotionCard = motion(Card);
 
-const ProjectItem = ({ image, name, id }) => {
+// Utility function to create URL-friendly slug
+const slugify = (text) => {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+};
+
+const ProjectItem = ({ image, name }) => {
+  const slug = slugify(name);
+
   return (
     <MotionCard
       sx={{
@@ -30,7 +43,7 @@ const ProjectItem = ({ image, name, id }) => {
     >
       <CardActionArea
         component={Link}
-        to={`/project/${id}`}
+        to={`/projects/${slug}`}
         sx={{ flexGrow: 1 }}
       >
         <Box sx={{ position: "relative", overflow: "hidden" }}>

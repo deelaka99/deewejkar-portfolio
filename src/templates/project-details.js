@@ -3,11 +3,11 @@ import Layout from "../components/Layout";
 import ProjectDetail from "../components/ProjectDetail";
 
 const ProjectDetails = ({ pageContext }) => {
-  const { id } = pageContext;
+  const { slug } = pageContext;
 
   return (
     <Layout>
-      <ProjectDetail id={id} />
+      <ProjectDetail slug={slug} />
     </Layout>
   );
 };
