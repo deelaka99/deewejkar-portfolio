@@ -22,7 +22,7 @@ export const fetchSkills = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:1337/api/skills?filters[type]=technical-skill&populate=*",
+        `${process.env.GATSBY_BACKEND_URL}/api/skills?filters[type]=technical-skill&populate=*`,
       );
       const data = await response.json();
       dispatch(fetchSkillsSuccess(data));
