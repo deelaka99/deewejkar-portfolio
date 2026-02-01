@@ -19,7 +19,7 @@ exports.createPages = async ({ actions }) => {
   try {
     // Fetch projects from Strapi API
     const response = await fetch(
-      `${process.env.GATSBY_BACKEND_URL || "http://localhost:1337"}/api/projects?populate=*`,
+      `${process.env.GATSBY_BACKEND_URL || "http://localhost:1337"}/api/projects?populate[skills]=true&populate[image]=true&populate[featured_image]=true`,
     );
     const data = await response.json();
     const projects = data.data || [];
@@ -34,6 +34,12 @@ exports.createPages = async ({ actions }) => {
         context: {
           slug: slug,
           id: project.id,
+          projectData: {
+            title: project.title,
+            description: project.description,
+            featured_image: project.featured_image,
+            image: project.image,
+          },
         },
       });
     });
