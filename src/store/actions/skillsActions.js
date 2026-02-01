@@ -25,9 +25,6 @@ export const fetchSkills = () => {
         "http://localhost:1337/api/skills?filters[type]=technical-skill&populate=*",
       );
       const data = await response.json();
-
-      console.log("Data: ", data);
-
       dispatch(fetchSkillsSuccess(data));
     } catch (error) {
       dispatch(fetchSkillsFailure({ error: error.message }));
