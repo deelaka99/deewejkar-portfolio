@@ -116,11 +116,11 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Passionate Full Stack Software Engineer building innovative
-                React and Node.js solutions with integrated AI/ML capabilities.
-                Specializing in accessible, lightning-fast, and visually
-                stunning UI/UX empowering users and elevating brands in the
-                digital world.
+                I am a professional Full Stack Software Engineer specializing in
+                building innovative React and Node.js solutions with integrated
+                AI/ML capabilities. Based in Colombo, Sri Lanka, I focus on
+                delivering accessible, high-performance, and visually stunning
+                digital products that empower users and elevate brands.
               </Typography>
 
               <Stack
