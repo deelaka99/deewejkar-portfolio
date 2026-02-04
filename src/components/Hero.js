@@ -9,7 +9,7 @@ import {
   Instagram as InstagramIcon,
   X as XIcon,
 } from "@mui/icons-material";
-import ProfileDP from "../images/dp1.jpg";
+import ProfileDP from "../images/dp1.png";
 
 const Hero = () => {
   // Floating animation for the image
