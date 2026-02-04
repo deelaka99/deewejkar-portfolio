@@ -2,53 +2,69 @@ const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch");
 
-// Utility function to create URL-friendly slug
-const slugify = (text) => {
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
-};
+const slugify = require("./src/helpers/slugify");
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions;
 
   try {
-    // Fetch projects from Strapi API
-    const response = await fetch(
-      `${process.env.GATSBY_BACKEND_URL || "http://localhost:1337"}/api/projects?populate[skills]=true&populate[image]=true&populate[featured_image]=true`,
-    );
-    const data = await response.json();
-    const projects = data.data || [];
+    const backendUrl =
+      process.env.GATSBY_BACKEND_URL ||
+      "https://services.deelakakariyawasam.dev";
+    console.log("Fetching projects from:", backendUrl);
 
-    projects.forEach((project) => {
-      const slug = slugify(
-        project.title || project.name || `project-${project.id}`,
+    const response = await fetch(
+      `${backendUrl}/api/projects?populate[skills]=true&populate[image]=true&populate[featured_image]=true`,
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch projects: ${response.status} ${response.statusText}`,
       );
+    }
+
+    const data = await response.json();
+    console.log(
+      "Full data received from Strapi:",
+      JSON.stringify(data).substring(0, 500) + "...",
+    );
+
+    let projects = [];
+    if (data && Array.isArray(data.data)) {
+      projects = data.data;
+    } else if (Array.isArray(data)) {
+      projects = data;
+    }
+
+    console.log(`Found ${projects.length} projects to process.`);
+
+    projects.forEach((project, index) => {
+      // Handle Strapi v4 data structure (attributes) or flattened data
+      const attrs = project.attributes || project;
+      const id = project.id || attrs.id || index;
+      const name = attrs.name || attrs.title || `project-${id}`;
+      const slug = slugify(name);
+
+      console.log(`[${index + 1}] Creating page: ${name} -> /projects/${slug}`);
+
       createPage({
         path: `/projects/${slug}`,
         component: path.resolve("./src/templates/project-details.js"),
         context: {
           slug: slug,
-          id: project.id,
-          projectData: {
-            title: project.title,
-            description: project.description,
-            featured_image: project.featured_image,
-            image: project.image,
-          },
+          id: id,
+          projectData: attrs,
         },
       });
     });
 
-    console.log(`✓ Created ${projects.length} project pages`);
+    if (projects.length === 0) {
+      console.warn("⚠️ No projects found to create pages for!");
+    } else {
+      console.log(`✓ Successfully created ${projects.length} project pages`);
+    }
   } catch (error) {
     console.error("Error creating project pages:", error);
-    // Fallback: create some placeholder pages
-    console.log("Using fallback page creation");
   }
 };
 

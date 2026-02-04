@@ -13,16 +13,7 @@ import LazyImage from "./LazyImage";
 // Create a motion component for the Card
 const MotionCard = motion(Card);
 
-// Utility function to create URL-friendly slug
-const slugify = (text) => {
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "")
-    .replace(/--+/g, "-");
-};
+import slugify from "../helpers/slugify";
 
 const ProjectItem = ({ image, name }) => {
   const slug = slugify(name);

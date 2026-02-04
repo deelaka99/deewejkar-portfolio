@@ -22,16 +22,7 @@ import LazyImage from "../components/LazyImage";
 import { fetchProjects } from "../store/actions/projectsActions";
 import { getImageUrl } from "../helpers/imageUrl";
 
-// Utility function to create URL-friendly slug
-const slugify = (text) => {
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "")
-    .replace(/--+/g, "-");
-};
+import slugify from "../helpers/slugify";
 
 function ProjectDetail({ slug }) {
   const dispatch = useDispatch();

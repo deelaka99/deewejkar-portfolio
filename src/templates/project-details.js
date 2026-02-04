@@ -29,7 +29,24 @@ export const Head = ({ pageContext }) => {
   const title = capitalizeWords(slug.replace(/-/g, " "));
   const description = `View detailed information about ${title} including technologies used, features, and live demo.`;
 
-  const imageUrl = getImageUrl(projectData?.featured_image?.data?.url || projectData?.image?.data?.url);
+  // Robustly extract image URL from projectData
+  const getRawImageUrl = (field) => {
+    if (!field) return null;
+    // Handle array of images (common in the UI components)
+    if (Array.isArray(field) && field.length > 0) return field[0].url;
+    // Handle Strapi v4 nested structure: { data: { attributes: { url } } }
+    if (field.data?.attributes?.url) return field.data.attributes.url;
+    // Handle array in data: { data: [{ attributes: { url } }] }
+    if (Array.isArray(field.data) && field.data.length > 0)
+      return field.data[0].attributes?.url;
+    // Handle flattened object { url }
+    return field.url || null;
+  };
+
+  const imageUrl = getImageUrl(
+    getRawImageUrl(projectData?.featured_image) ||
+      getRawImageUrl(projectData?.image),
+  );
 
   // Structured data for the project
   const structuredData = {
