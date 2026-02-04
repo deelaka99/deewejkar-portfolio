@@ -6,6 +6,9 @@ import {
   YouTube as YouTubeIcon,
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
+  X as XIcon,
+  Article as MediumIcon,
+  Terminal as StackOverflowIcon,
 } from "@mui/icons-material";
 
 const Footer = () => {
@@ -34,6 +37,21 @@ const Footer = () => {
       icon: <YouTubeIcon fontSize="large" />,
       url: "https://www.youtube.com/@deelakawejithkariyawasam",
       color: "#FF0000",
+    },
+    {
+      icon: <XIcon fontSize="large" />,
+      url: "https://x.com/deelakawejith",
+      color: "#000000",
+    },
+    {
+      icon: <MediumIcon fontSize="large" />,
+      url: "https://medium.com/@123wejith",
+      color: "#00ab6c",
+    },
+    {
+      icon: <StackOverflowIcon fontSize="large" />,
+      url: "https://stackoverflow.com/users/13145710/deelaka-kariyawasam",
+      color: "#f48024",
     },
   ];
 

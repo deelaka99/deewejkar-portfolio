@@ -7,6 +7,7 @@ import {
   YouTube as YouTubeIcon,
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
+  X as XIcon,
 } from "@mui/icons-material";
 import ProfileDP from "../images/dp1.jpg";
 
@@ -198,6 +199,14 @@ const Hero = () => {
                   style={{ color: "inherit" }}
                 >
                   <YouTubeIcon fontSize="large" />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#000000" }}
+                  href="https://x.com/deelakawejith"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
+                  <XIcon fontSize="large" />
                 </motion.a>
               </Stack>
             </motion.div>
