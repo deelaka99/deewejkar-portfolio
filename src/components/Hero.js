@@ -9,7 +9,6 @@ import {
   Instagram as InstagramIcon,
   X as XIcon,
 } from "@mui/icons-material";
-import ProfileDP from "../images/dp1.png";
 
 const Hero = () => {
   // Floating animation for the image
@@ -246,7 +245,7 @@ const Hero = () => {
             >
               <Box
                 component="img"
-                src={ProfileDP}
+                src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770200270/deelaka_kariyawasam_970183abf2.png"
                 alt="Deelaka Kariyawasam"
                 sx={{
                   width: { xs: 280, md: 400 },
