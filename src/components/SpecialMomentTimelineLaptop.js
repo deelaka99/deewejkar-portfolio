@@ -69,77 +69,79 @@ function SpecialMomentTimelineLaptop() {
         display: { xs: "none", md: "block" },
       }}
     >
-      {specialMomentsList?.data?.map((moment, index) => (
-        <TimelineItem
-          key={index}
-          component={motion.div}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
+      {specialMomentsList?.data
+        ?.sort((a, b) => b.order - a.order)
+        ?.map((moment, index) => (
+          <TimelineItem
+            key={index}
+            component={motion.div}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
           >
-            {moment.date}
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }} />
-            <TimelineDot
-              color="primary"
-              sx={{ boxShadow: "0 0 10px rgba(102, 51, 153, 0.3)" }}
+            <TimelineOppositeContent
+              sx={{ m: "auto 0" }}
+              align="right"
+              variant="body2"
+              color="text.secondary"
             >
-              {moment.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Paper
-              component={motion.div}
-              whileHover={{
-                y: -10,
-                boxShadow: "0 15px 35px rgba(0,0,0,0.5)",
-              }}
-              sx={{
-                bgcolor: "background.paper",
-                borderRadius: 4,
-                overflow: "hidden",
-                border: "1px solid rgba(255,255,255,0.05)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              <Box
-                component="img"
-                src={getImageUrl(moment?.image?.url)}
-                alt="moment"
-                loading="lazy"
-                sx={{ width: "100%", height: 250, objectFit: "cover" }}
-              />
-              <Box sx={{ p: 2.5 }}>
-                <Typography
-                  variant="h6"
-                  component="p"
-                  sx={{
-                    fontWeight: "bold",
-                    color: "secondary.light",
-                    mb: 1,
-                  }}
-                >
-                  {moment.title}
-                </Typography>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                  {moment.location}
-                </Typography>
-                <Typography variant="body1" sx={{ fontWeight: 500, mt: 1 }}>
-                  {moment.desc}
-                </Typography>
-              </Box>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-      ))}
+              {moment.date}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }} />
+              <TimelineDot
+                color="primary"
+                sx={{ boxShadow: "0 0 10px rgba(102, 51, 153, 0.3)" }}
+              >
+                {moment.type === "edu" ? <SchoolIcon /> : <WorkIcon />}
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: "rgba(102, 51, 153, 0.3)" }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Paper
+                component={motion.div}
+                whileHover={{
+                  y: -10,
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.5)",
+                }}
+                sx={{
+                  bgcolor: "background.paper",
+                  borderRadius: 4,
+                  overflow: "hidden",
+                  border: "1px solid rgba(255,255,255,0.05)",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={getImageUrl(moment?.image?.url)}
+                  alt={moment.title}
+                  loading="lazy"
+                  sx={{ width: "100%", height: 250, objectFit: "cover" }}
+                />
+                <Box sx={{ p: 2.5 }}>
+                  <Typography
+                    variant="h6"
+                    component="p"
+                    sx={{
+                      fontWeight: "bold",
+                      color: "secondary.light",
+                      mb: 1,
+                    }}
+                  >
+                    {moment.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                    {moment.location}
+                  </Typography>
+                  <Typography variant="body1" sx={{ fontWeight: 500, mt: 1 }}>
+                    {moment.desc}
+                  </Typography>
+                </Box>
+              </Paper>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
     </Timeline>
   );
 }
