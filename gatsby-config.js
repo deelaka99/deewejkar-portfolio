@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `DeeWejkar Portfolio`,
-    description: `Portfolio website showcasing web development and mobile app projects by Deelaka Kariyawasam`,
+    title: `Deelaka Kariyawasam | Full Stack Software Engineer Portfolio`,
+    description: `Full Stack Software Engineer specializing in React, Node.js, and mobile development. Showcasing innovative web solutions and software engineering projects.`,
     author: `Deelaka Kariyawasam`,
     siteUrl: `https://www.deelakakariyawasam.dev`,
   },

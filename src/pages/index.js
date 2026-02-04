@@ -26,6 +26,6 @@ export default IndexPage;
 export const Head = () => (
   <Seo
     title="Deelaka Kariyawasam - Full Stack Software Engineer | Portfolio"
-    description="Full Stack Software Engineer specializing in React, Node.js, and mobile development. Explore my portfolio of web applications, mobile apps, and software projects."
+    description="Full Stack Software Engineer specializing in React, Node.js, and mobile development. Hub for my web applications, mobile apps, and software projects."
   />
 );

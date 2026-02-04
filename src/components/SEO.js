@@ -10,6 +10,7 @@ const SEO = ({
   article = false,
   author,
   datePublished,
+  noindex = false,
   children,
 }) => {
   const { site } = useStaticQuery(graphql`
@@ -121,8 +122,14 @@ const SEO = ({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
+      <meta
+        name="robots"
+        content={noindex ? "noindex, nofollow" : "index, follow"}
+      />
+      <meta
+        name="googlebot"
+        content={noindex ? "noindex, nofollow" : "index, follow"}
+      />
 
       {children}
     </Helmet>

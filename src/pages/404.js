@@ -94,5 +94,6 @@ export const Head = () => (
   <Seo
     title="404 - Page Not Found | Deelaka Kariyawasam"
     description="The page you're looking for doesn't exist."
+    noindex={true}
   />
 );
