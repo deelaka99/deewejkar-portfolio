@@ -82,8 +82,9 @@ const Languages = () => {
           mx: "auto",
         }}
       >
-        A curated selection of technologies, frameworks, and tools I use to
-        build modern, scalable, and beautiful digital products.
+        A curated toolkit of React, Node.js, and modern frameworks I use as a
+        Full Stack Software Engineer to build scalable, high-performance, and
+        beautiful digital products.
       </Typography>
 
       {skillLoading && (

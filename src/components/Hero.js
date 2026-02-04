@@ -68,7 +68,7 @@ const Hero = () => {
             >
               <Typography
                 variant="overline"
-                component={motion.span}
+                component={motion.h2}
                 variants={itemVariants}
                 sx={{
                   color: "secondary.main",
@@ -116,9 +116,10 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Passionate about building innovative web solutions with
-                integrated AI/ML capabilities—accessible, lightning-fast, and
-                visually stunning—empowering users and elevating brands in the
+                Passionate Full Stack Software Engineer building innovative
+                React and Node.js solutions with integrated AI/ML capabilities.
+                Specializing in accessible, lightning-fast, and visually
+                stunning UI/UX empowering users and elevating brands in the
                 digital world.
               </Typography>
 
