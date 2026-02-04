@@ -20,6 +20,7 @@ import {
 import { motion } from "framer-motion";
 import LazyImage from "../components/LazyImage";
 import { fetchProjects } from "../store/actions/projectsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 // Utility function to create URL-friendly slug
 const slugify = (text) => {
@@ -103,7 +104,7 @@ function ProjectDetail({ slug }) {
         }}
       >
         <LazyImage
-          src={`${process.env.GATSBY_BACKEND_URL}${project?.featured_image[0]?.url}`}
+          src={getImageUrl(project?.featured_image[0]?.url)}
           alt={project.name}
           height={500}
           width="100%"

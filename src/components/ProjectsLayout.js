@@ -4,6 +4,7 @@ import ProjectItem from "../components/ProjectItem";
 import { Grid, Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { fetchProjects } from "../store/actions/projectsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 function ProjectsLayout() {
   const dispatch = useDispatch();
@@ -87,7 +88,7 @@ function ProjectsLayout() {
             <ProjectItem
               id={project.id}
               name={project.name}
-              image={`${process.env.GATSBY_BACKEND_URL}${project?.image[0]?.url}`}
+              image={getImageUrl(project?.image[0]?.url)}
             />
           </Grid>
         ))}

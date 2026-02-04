@@ -12,6 +12,7 @@ import {
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { School as SchoolIcon, Work as WorkIcon } from "@mui/icons-material";
 import { fetchSpecialMoments } from "../store/actions/specialMomentsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 function SpecialMomentTimelineMobile() {
   const dispatch = useDispatch();
@@ -85,7 +86,7 @@ function SpecialMomentTimelineMobile() {
               >
                 <Box
                   component="img"
-                  src={`${process.env.GATSBY_BACKEND_URL}${moment?.image?.url}`}
+                  src={getImageUrl(moment?.image?.url)}
                   alt="moment"
                   loading="lazy"
                   sx={{ width: "100%", height: 150, objectFit: "cover" }}

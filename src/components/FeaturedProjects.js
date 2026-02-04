@@ -6,6 +6,7 @@ import ProjectItem from "./ProjectItem";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "gatsby";
 import { fetchProjects } from "../store/actions/projectsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 const FeaturedProjects = () => {
   const dispatch = useDispatch();
@@ -107,7 +108,7 @@ const FeaturedProjects = () => {
               <ProjectItem
                 id={project.id}
                 name={project.name}
-                image={`${process.env.GATSBY_BACKEND_URL}${project?.image[0]?.url}`}
+                image={getImageUrl(project?.image[0]?.url)}
               />
             </Grid>
           ))}

@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import ProjectDetail from "../components/ProjectDetail";
 import Seo from "../components/SEO";
 
+import { getImageUrl } from "../helpers/imageUrl";
+
 const ProjectDetails = ({ pageContext }) => {
   const { slug } = pageContext;
 
@@ -27,11 +29,7 @@ export const Head = ({ pageContext }) => {
   const title = capitalizeWords(slug.replace(/-/g, " "));
   const description = `View detailed information about ${title} including technologies used, features, and live demo.`;
 
-  const imageUrl = projectData?.featured_image?.data?.url
-    ? `${process.env.GATSBY_BACKEND_URL}${projectData.featured_image.data.url}`
-    : projectData?.image?.data?.url
-      ? `${process.env.GATSBY_BACKEND_URL}${projectData.image.data.url}`
-      : null;
+  const imageUrl = getImageUrl(projectData?.featured_image?.data?.url || projectData?.image?.data?.url);
 
   // Structured data for the project
   const structuredData = {

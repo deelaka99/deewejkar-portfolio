@@ -14,6 +14,7 @@ import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { School as SchoolIcon, Work as WorkIcon } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { fetchExperience } from "../store/actions/experiencesActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 function ExperienceTimelineLaptop() {
   const dispatch = useDispatch();
@@ -118,7 +119,7 @@ function ExperienceTimelineLaptop() {
               >
                 <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                   <Avatar
-                    src={`${process.env.GATSBY_BACKEND_URL}${exp?.image?.url}`}
+                    src={getImageUrl(exp?.image?.url)}
                     alt={exp.title}
                     sx={{
                       mr: 2,

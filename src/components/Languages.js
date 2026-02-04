@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, Typography, Paper } from "@mui/material";
 import { fetchSkills } from "../store/actions/skillsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 const Languages = () => {
   const dispatch = useDispatch();
@@ -143,7 +144,7 @@ const Languages = () => {
             >
               <Box
                 component="img"
-                src={`${process.env.GATSBY_BACKEND_URL}${item?.icon?.url}`}
+                src={getImageUrl(item?.icon?.url)}
                 alt={item?.name}
                 loading="lazy"
                 sx={{
