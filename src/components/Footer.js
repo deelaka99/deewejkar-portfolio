@@ -69,7 +69,14 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="sm">
-        <Stack direction="row" spacing={3} justifyContent="center" mb={2}>
+        <Stack
+          direction="row"
+          spacing={{ xs: 1.5, sm: 3 }}
+          justifyContent="center"
+          flexWrap="wrap"
+          useFlexGap
+          mb={2}
+        >
           {socialLinks.map((link, index) => (
             <IconButton
               key={index}
