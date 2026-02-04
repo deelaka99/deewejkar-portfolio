@@ -4,21 +4,21 @@ import {
   Typography,
   Box,
   Grid,
-  Paper,
-  Button,
-  Stack,
+  // Paper,
+  // Button,
+  // Stack,
   Chip,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import Seo from "../components/SEO";
-import {
-  Launch as LaunchIcon,
-  Code as CodeIcon,
-  RecordVoiceOver as MentorIcon,
-  EmojiEvents as JudgeIcon,
-  School as SchoolIcon,
-} from "@mui/icons-material";
+// import {
+//   Launch as LaunchIcon,
+//   Code as CodeIcon,
+//   RecordVoiceOver as MentorIcon,
+//   EmojiEvents as JudgeIcon,
+//   School as SchoolIcon,
+// } from "@mui/icons-material";
 
 const AboutPage = () => {
   const containerVariants = {
