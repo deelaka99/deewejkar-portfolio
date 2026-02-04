@@ -1,95 +1,84 @@
 # DeeWejKar Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/c0d50c33-b0c1-499d-916f-cc1bdf5d649e/deploy-status)](https://app.netlify.com/projects/deelaka-wejith/deploys)
 
-A modern, responsive developer portfolio built with Gatsby, Material-UI (MUI), and Framer Motion. Showcases projects, experience, skills, and more with a beautiful glassmorphism-inspired design.
+A modern, high-performance developer portfolio built with **Gatsby**, **Material-UI (MUI)**, and **Framer Motion**. This project features a beautiful glassmorphism-inspired design and is fully integrated with a **Strapi CMS** for dynamic content management.
 
-## Features
+## 🚀 Key Features
 
-- **Gatsby** static site generator for fast performance
-- **Material-UI (MUI)** for modern, accessible UI components
-- **Framer Motion** for smooth animations
-- **Glassmorphism** and gradient design patterns
-- **Responsive** and mobile-friendly layout
-- **Custom DK favicon** (SVG)
-- **Lazy loading** for all images
-- **Project, Experience, and Special Moments pages**
-- **About Me** and Hero sections
-- **Languages/Tech Stack carousel**
+### 🔍 Search Engine Optimization (SEO)
 
-## Getting Started
+- **Comprehensive Meta Tags**: Dynamic title and description tags for every page.
+- **Social Previews**: Full Open Graph (Facebook/LinkedIn) and Twitter Card support.
+- **Structured Data**: JSON-LD implementation (Schema.org) for **Person** and **Article** schemas to enhance search result snippets.
+- **Automated Assets**: Automatic generation of `sitemap.xml` and `robots.txt` during the build process.
+
+### 🖼️ Image & Performance Optimization
+
+- **Cloudinary Integration**: Fully optimized image delivery via Cloudinary.
+- **Intelligent URL Handling**: Custom `getImageUrl` helper handles both external Cloudinary URLs and local Strapi assets.
+- **Progressive Loading**: Lazy loading with skeleton loaders to ensure a smooth user experience even on slow connections.
+
+### 🎨 Design & Interaction
+
+- **Modern Aesthetics**: Glassmorphism, vibrant gradients, and premium typography (Outfit/Inter).
+- **Smooth Animations**: Powered by Framer Motion for subtle micro-interactions and scroll-based animations.
+- **Responsive Layout**: Pixel-perfect experience across mobile, tablet, and desktop devices.
+
+### ⚙️ Content Management
+
+- **Strapi Integration**: Dynamic content fetching via Redux for Projects, Experiences, Skills, and Special Moments.
+- **Dynamic Routing**: Automatic page generation for project details with SEO-friendly slugs.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Gatsby.js (React)
+- **Styling**: Material-UI (MUI), Vanilla CSS
+- **Animations**: Framer Motion
+- **State Management**: Redux, Redux Thunk
+- **Backend**: Strapi CMS (v4)
+- **Storage**: Cloudinary
+- **Deployment**: Netlify
+
+## 📂 Project Structure
+
+- `src/components/` — Reusable UI components (SEO, Header, Hero, Timelines, etc.)
+- `src/pages/` — Main site pages
+- `src/templates/` — Dynamic page templates (Project Details)
+- `src/store/` — Redux actions and reducers for data fetching
+- `src/helpers/` — Utility functions (`imageUrl.js`, `slugify.js`)
+- `gatsby-node.js` — Core logic for data fetching and dynamic page creation
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or later recommended)
+- Node.js (v18+ recommended)
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
+1. Clone and install:
    ```sh
-   git clone https://github.com/yourusername/deewejkar-portfolio.git
+   git clone https://github.com/deelaka99/deewejkar-portfolio.git
    cd deewejkar-portfolio
-   ```
-2. Install dependencies:
-   ```sh
    npm install
-   # or
-   yarn install
+   ```
+2. Configure Environment: Create a `.env.development` file with:
+   ```env
+   GATSBY_BACKEND_URL=your_strapi_url
    ```
 
 ### Development
 
-Start the development server:
-
 ```sh
 npm run develop
-# or
-yarn develop
 ```
 
-Visit [http://localhost:8000](http://localhost:8000) to view the site.
+Visit `http://localhost:8000` to view the site.
 
-### Build
-
-To build the site for production:
-
-```sh
-npm run build
-# or
-yarn build
-```
-
-The static files will be output to the `public/` directory.
-
-### Clean
-
-To clean the cache and public directories:
-
-```sh
-npm run clean
-# or
-yarn clean
-```
-
-## Project Structure
-
-- `src/components/` — React components (Header, Hero, Languages, AboutMe, FeaturedProjects, Footer, etc.)
-- `src/pages/` — Main pages (index.js, experience.js, projects.js, special-moments.js)
-- `src/helpers/` — Data helpers (ProjectList.js)
-- `src/images/` — All images and assets
-- `src/styles/` — Global CSS
-- `src/templates/` — Project details template
-- `public/` — Gatsby build output and static assets (including favicon.svg)
-
-## Customization
-
-- **Favicon:** Edit `public/favicon.svg` to update the DK logo.
-- **Theme:** Adjust `src/theme.js` for color and typography changes.
-- **Content:** Update `src/helpers/ProjectList.js`, `src/pages/experience.js`, and other page/component files.
-
-## License
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ by Deelaka Kariyawasam
+Built with ❤️ by **Deelaka Kariyawasam**
