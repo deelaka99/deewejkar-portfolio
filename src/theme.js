@@ -67,10 +67,13 @@ const theme = createTheme({
       styleOverrides: `
         html {
           scroll-behavior: smooth;
+          overflow-x: hidden;
         }
         body {
           scrollbar-width: thin;
           scrollbar-color: #663399 #121212;
+          overflow-x: hidden;
+          width: 100%;
         }
         ::-webkit-scrollbar {
           width: 8px;

@@ -78,7 +78,7 @@ const Hero = () => {
                   display: "block",
                 }}
               >
-                SOFTWARE ENGINEER
+                FULL STACK SOFTWARE ENGINEER
               </Typography>
               <Typography
                 variant="h1"
