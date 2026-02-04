@@ -1,14 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import ProjectItem from "./ProjectItem";
-import { ProjectList } from "../helpers/ProjectList";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "gatsby";
+import { fetchProjects } from "../store/actions/projectsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 const FeaturedProjects = () => {
-  // Select top 3 projects (or specific ones by ID if preferred)
-  const featuredProjects = ProjectList.slice(0, 3);
+  const dispatch = useDispatch();
+  const { projectList, projectLoading, error } = useSelector(
+    (state) => state.projectsReducer,
+  );
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
+  if (projectLoading) {
+    return (
+      <Box
+        sx={{
+          textAlign: "center",
+          py: 8,
+          display: { xs: "none", md: "block" },
+        }}
+      >
+        <Typography variant="h6" sx={{ color: "text.secondary" }}>
+          Loading projects...
+        </Typography>
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box
+        sx={{
+          textAlign: "center",
+          py: 8,
+          display: { xs: "none", md: "block" },
+        }}
+      >
+        <Typography variant="h6" sx={{ color: "error.main" }}>
+          Error loading projects: {error}
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ py: 8, bgcolor: "background.default" }}>
@@ -49,7 +89,7 @@ const FeaturedProjects = () => {
         </Box>
 
         <Grid container spacing={5}>
-          {featuredProjects.map((project, index) => (
+          {projectList?.data?.slice(0, 3).map((project, index) => (
             <Grid
               item
               xs={12}
@@ -68,7 +108,7 @@ const FeaturedProjects = () => {
               <ProjectItem
                 id={project.id}
                 name={project.name}
-                image={project.image}
+                image={getImageUrl(project?.image[0]?.url)}
               />
             </Grid>
           ))}

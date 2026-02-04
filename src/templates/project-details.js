@@ -1,174 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
+import ProjectDetail from "../components/ProjectDetail";
 import Seo from "../components/SEO";
-import {
-  Container,
-  Typography,
-  Chip,
-  Stack,
-  Button,
-  Paper,
-  Grid,
-} from "@mui/material";
-import {
-  GitHub as GitHubIcon,
-  Launch as LaunchIcon,
-} from "@mui/icons-material";
-import { ProjectList } from "../helpers/ProjectList";
-import { motion } from "framer-motion";
-import LazyImage from "../components/LazyImage";
 
-import { graphql } from "gatsby";
+import { getImageUrl } from "../helpers/imageUrl";
 
-const ProjectDetails = ({ pageContext, data }) => {
-  const { id } = pageContext;
-  const project = ProjectList.find((p) => p.id === id);
-
-  if (!project)
-    return (
-      <Layout>
-        <Container maxWidth="md" sx={{ py: 8, textAlign: "center" }}>
-          <Typography variant="h4">Project not found</Typography>
-        </Container>
-      </Layout>
-    );
-
-  // Split skills string into array
-  const skillsArray = project.skills
-    ? project.skills.split(",").map((s) => s.trim())
-    : [];
+const ProjectDetails = ({ pageContext }) => {
+  const { slug } = pageContext;
 
   return (
     <Layout>
-      <Container maxWidth="md" sx={{ py: 4 }}>
-        <Typography
-          variant="h3"
-          component={motion.h1}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          align="center"
-          gutterBottom
-          sx={{ mb: 4, fontWeight: "bold", color: "primary.main" }}
-        >
-          {project.name}
-        </Typography>
-
-        <Paper
-          elevation={4}
-          component={motion.div}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          sx={{
-            overflow: "hidden",
-            borderRadius: 2,
-            mb: 4,
-            bgcolor: "background.default",
-          }}
-        >
-          <LazyImage
-            src={project.image}
-            alt={project.name}
-            height={500}
-            width="100%"
-            objectFit="contain"
-            borderRadius={2}
-          />
-        </Paper>
-
-        <Grid
-          container
-          spacing={4}
-          component={motion.div}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          <Grid item xs={12} md={8}>
-            <Typography
-              variant="h5"
-              gutterBottom
-              sx={{ color: "secondary.light", fontWeight: "bold" }}
-            >
-              Overview
-            </Typography>
-            <Typography
-              variant="body1"
-              paragraph
-              sx={{
-                mb: 4,
-                lineHeight: 1.8,
-                fontSize: "1.1rem",
-                color: "rgba(255,255,255,0.8)",
-              }}
-            >
-              {project.desc}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper
-              sx={{
-                p: 3,
-                borderRadius: 3,
-                bgcolor: "rgba(102, 51, 153, 0.05)",
-                border: "1px solid rgba(102, 51, 153, 0.2)",
-              }}
-            >
-              <Typography
-                variant="h6"
-                gutterBottom
-                sx={{ color: "secondary.light", fontWeight: "bold" }}
-              >
-                Technologies
-              </Typography>
-              <Stack
-                direction="row"
-                spacing={1}
-                flexWrap="wrap"
-                sx={{ mb: 4, rowGap: 1 }}
-              >
-                {skillsArray.map((skill, index) => (
-                  <Chip
-                    key={index}
-                    label={skill}
-                    color="primary"
-                    variant="outlined"
-                    size="small"
-                  />
-                ))}
-              </Stack>
-
-              <Stack spacing={2}>
-                {project.github && (
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    startIcon={<GitHubIcon />}
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Github
-                  </Button>
-                )}
-                {project.activelink && (
-                  <Button
-                    variant="outlined"
-                    fullWidth
-                    startIcon={<LaunchIcon />}
-                    href={project.activelink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    color="secondary"
-                  >
-                    Live Demo
-                  </Button>
-                )}
-              </Stack>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
+      <ProjectDetail slug={slug} />
     </Layout>
   );
 };
@@ -176,30 +18,63 @@ const ProjectDetails = ({ pageContext, data }) => {
 export default ProjectDetails;
 
 export const Head = ({ pageContext }) => {
-  const { id } = pageContext;
-  const project = ProjectList.find((p) => p.id === id);
+  const { slug, projectData } = pageContext;
 
-  if (!project) {
-    return <Seo title="Project Not Found" />;
-  }
+  // Helper function to capitalize each word
+  const capitalizeWords = (str) => {
+    return str.replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
+  // Generate SEO-friendly title and description
+  const title = capitalizeWords(slug.replace(/-/g, " "));
+  const description = `View detailed information about ${title} including technologies used, features, and live demo.`;
+
+  // Robustly extract image URL from projectData
+  const getRawImageUrl = (field) => {
+    if (!field) return null;
+    // Handle array of images (common in the UI components)
+    if (Array.isArray(field) && field.length > 0) return field[0].url;
+    // Handle Strapi v4 nested structure: { data: { attributes: { url } } }
+    if (field.data?.attributes?.url) return field.data.attributes.url;
+    // Handle array in data: { data: [{ attributes: { url } }] }
+    if (Array.isArray(field.data) && field.data.length > 0)
+      return field.data[0].attributes?.url;
+    // Handle flattened object { url }
+    return field.url || null;
+  };
+
+  const imageUrl = getImageUrl(
+    getRawImageUrl(projectData?.featured_image) ||
+      getRawImageUrl(projectData?.image),
+  );
+
+  // Structured data for the project
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: title,
+    description: description,
+    author: {
+      "@type": "Person",
+      name: "Deelaka Kariyawasam",
+      jobTitle: "Full Stack Software Engineer",
+    },
+    ...(imageUrl && { image: imageUrl }),
+    url: `https://www.deelakakariyawasam.dev/projects/${slug}/`,
+  };
 
   return (
-    <Seo
-      title={`${project.name} | Deelaka Kariyawasam`}
-      description={project.desc.substring(0, 155)}
-      pathname={`/project/${id}/`}
-      image={project.image}
-      article={true}
-    />
+    <>
+      <Seo
+        title={`${title} | Deelaka Kariyawasam`}
+        description={description}
+        pathname={`/projects/${slug}/`}
+        image={imageUrl}
+        article={true}
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </>
   );
 };
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

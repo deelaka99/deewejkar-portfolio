@@ -13,7 +13,11 @@ import LazyImage from "./LazyImage";
 // Create a motion component for the Card
 const MotionCard = motion(Card);
 
-const ProjectItem = ({ image, name, id }) => {
+import slugify from "../helpers/slugify";
+
+const ProjectItem = ({ image, name }) => {
+  const slug = slugify(name);
+
   return (
     <MotionCard
       sx={{
@@ -30,7 +34,7 @@ const ProjectItem = ({ image, name, id }) => {
     >
       <CardActionArea
         component={Link}
-        to={`/project/${id}`}
+        to={`/projects/${slug}`}
         sx={{ flexGrow: 1 }}
       >
         <Box sx={{ position: "relative", overflow: "hidden" }}>

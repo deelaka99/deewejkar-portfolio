@@ -7,6 +7,7 @@ import {
   YouTube as YouTubeIcon,
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
+  X as XIcon,
 } from "@mui/icons-material";
 import ProfileDP from "../images/dp1.jpg";
 
@@ -77,7 +78,7 @@ const Hero = () => {
                   display: "block",
                 }}
               >
-                SOFTWARE ENGINEER
+                FULL STACK SOFTWARE ENGINEER
               </Typography>
               <Typography
                 variant="h1"
@@ -169,7 +170,7 @@ const Hero = () => {
               >
                 <motion.a
                   whileHover={{ scale: 1.2, color: "#0077b5" }}
-                  href="https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/"
+                  href="https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213"
                   target="_blank"
                   style={{ color: "inherit" }}
                 >
@@ -198,6 +199,14 @@ const Hero = () => {
                   style={{ color: "inherit" }}
                 >
                   <YouTubeIcon fontSize="large" />
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#000000" }}
+                  href="https://x.com/deelakawejith"
+                  target="_blank"
+                  style={{ color: "inherit" }}
+                >
+                  <XIcon fontSize="large" />
                 </motion.a>
               </Stack>
             </motion.div>

@@ -6,6 +6,9 @@ import {
   YouTube as YouTubeIcon,
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
+  X as XIcon,
+  Article as MediumIcon,
+  Terminal as StackOverflowIcon,
 } from "@mui/icons-material";
 
 const Footer = () => {
@@ -22,7 +25,7 @@ const Footer = () => {
     },
     {
       icon: <LinkedInIcon fontSize="large" />,
-      url: "https://www.linkedin.com/in/deelaka-wejith-kariyawasam-7a9bb0213/",
+      url: "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
       color: "#0077b5",
     },
     {
@@ -34,6 +37,21 @@ const Footer = () => {
       icon: <YouTubeIcon fontSize="large" />,
       url: "https://www.youtube.com/@deelakawejithkariyawasam",
       color: "#FF0000",
+    },
+    {
+      icon: <XIcon fontSize="large" />,
+      url: "https://x.com/deelakawejith",
+      color: "#000000",
+    },
+    {
+      icon: <MediumIcon fontSize="large" />,
+      url: "https://medium.com/@123wejith",
+      color: "#00ab6c",
+    },
+    {
+      icon: <StackOverflowIcon fontSize="large" />,
+      url: "https://stackoverflow.com/users/13145710/deelaka-kariyawasam",
+      color: "#f48024",
     },
   ];
 
@@ -51,7 +69,14 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="sm">
-        <Stack direction="row" spacing={3} justifyContent="center" mb={2}>
+        <Stack
+          direction="row"
+          spacing={{ xs: 1.5, sm: 3 }}
+          justifyContent="center"
+          flexWrap="wrap"
+          useFlexGap
+          mb={2}
+        >
           {socialLinks.map((link, index) => (
             <IconButton
               key={index}

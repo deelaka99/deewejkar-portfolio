@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `DeeWejkar Portfolio`,
-    description: `Portfolio website showcasing web development and mobile app projects by Deelaka Kariyawasam`,
+    title: `Deelaka Kariyawasam | Full Stack Software Engineer Portfolio`,
+    description: `Full Stack Software Engineer specializing in React, Node.js, and mobile development. Showcasing innovative web solutions and software engineering projects.`,
     author: `Deelaka Kariyawasam`,
     siteUrl: `https://www.deelakakariyawasam.dev`,
   },
@@ -34,15 +34,13 @@ module.exports = {
         `,
         resolveSiteUrl: () => "https://www.deelakakariyawasam.dev",
         resolvePages: ({ allSitePage: { nodes: allPages } }) => {
-          return allPages.map((page) => {
-            return { ...page };
-          });
+          return allPages.filter((page) => !page.path.match(/404/));
         },
         serialize: ({ path }) => {
           return {
             url: path,
             changefreq: "daily",
-            priority: 1.0,
+            priority: path === "/" ? 1.0 : 0.8,
           };
         },
       },
@@ -51,7 +49,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.deelakakariyawasam.dev",
-        sitemap: "https://www.deelakakariyawasam.dev/sitemap.xml",
+        sitemap: "https://www.deelakakariyawasam.dev/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

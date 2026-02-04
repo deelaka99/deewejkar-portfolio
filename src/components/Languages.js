@@ -1,61 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Box, Typography, Paper } from "@mui/material";
-
-// Import images
-import HTML from "../images/langauges/html.png";
-import CSS from "../images/langauges/css.png";
-import JS from "../images/langauges/js.png";
-import PHP from "../images/langauges/php.png";
-import BS from "../images/langauges/bootstrap.png";
-import TWCSS from "../images/langauges/tailwind.png";
-import RJS from "../images/langauges/reactjs.png";
-import Laraval from "../images/langauges/laraval.png";
-import Node from "../images/langauges/nodejs.png";
-import MSQL from "../images/langauges/mysql.png";
-import Mongo from "../images/langauges/mongodb.png";
-import Java from "../images/langauges/java.png";
-import Python from "../images/langauges/python.png";
-import Csharp from "../images/langauges/c sharp.png";
-import C from "../images/langauges/c.png";
-import Android from "../images/langauges/android.png";
-import RN from "../images/langauges/rn.png";
-import Figma from "../images/langauges/figma.png";
-import Firebase from "../images/langauges/firebase.png";
+import { fetchSkills } from "../store/actions/skillsActions";
+import { getImageUrl } from "../helpers/imageUrl";
 
 const Languages = () => {
-  const imageData = [
-    { ImageName: "HTML", ImageSrc: HTML },
-    { ImageName: "CSS", ImageSrc: CSS },
-    { ImageName: "JavaScript", ImageSrc: JS },
-    { ImageName: "ReactJS", ImageSrc: RJS },
-    { ImageName: "Typescript", ImageSrc: JS }, // Placeholder if needed
-    { ImageName: "NodesJS", ImageSrc: Node },
-    { ImageName: "PHP", ImageSrc: PHP },
-    { ImageName: "Laravel", ImageSrc: Laraval },
-    { ImageName: "Java", ImageSrc: Java },
-    { ImageName: "C", ImageSrc: C },
-    { ImageName: "Python", ImageSrc: Python },
-    { ImageName: "C#", ImageSrc: Csharp },
-    { ImageName: "MySQL", ImageSrc: MSQL },
-    { ImageName: "MongoDB", ImageSrc: Mongo },
-    { ImageName: "Firebase", ImageSrc: Firebase },
-    { ImageName: "Android", ImageSrc: Android },
-    { ImageName: "React Native", ImageSrc: RN },
-    { ImageName: "Figma", ImageSrc: Figma },
-    { ImageName: "Tailwind", ImageSrc: TWCSS },
-    { ImageName: "Bootstrap", ImageSrc: BS },
-  ];
-
+  const dispatch = useDispatch();
+  const { skillList, skillLoading, error } = useSelector(
+    (state) => state.skillsReducer,
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(1100);
   const carouselRef = React.useRef(null);
 
+  // Fetch skills from API
   useEffect(() => {
+    dispatch(fetchSkills());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (skillList?.data?.length === 0) return;
+
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % imageData.length);
+      setCurrentIndex((prev) => (prev + 1) % skillList?.data?.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [imageData.length]);
+  }, [skillList?.data?.length]);
 
   // Measure container width on client only
   useEffect(() => {
@@ -116,6 +86,17 @@ const Languages = () => {
         build modern, scalable, and beautiful digital products.
       </Typography>
 
+      {skillLoading && (
+        <Typography sx={{ color: "#e0e0e0", mb: 4 }}>
+          Loading skills...
+        </Typography>
+      )}
+      {error && (
+        <Typography sx={{ color: "#ff6b6b", mb: 4 }}>
+          Error loading skills: {error}
+        </Typography>
+      )}
+
       <Box
         sx={{
           width: "100%",
@@ -136,9 +117,9 @@ const Languages = () => {
             height: "100%",
           }}
         >
-          {imageData.map((item, index) => (
+          {skillList?.data?.map((item, index) => (
             <Paper
-              key={index}
+              key={item.id || index}
               sx={{
                 minWidth: 120,
                 height: 150,
@@ -163,8 +144,8 @@ const Languages = () => {
             >
               <Box
                 component="img"
-                src={item.ImageSrc}
-                alt={item.ImageName}
+                src={getImageUrl(item?.icon?.url)}
+                alt={item?.name}
                 loading="lazy"
                 sx={{
                   width: 64,
@@ -189,7 +170,7 @@ const Languages = () => {
                     index === currentIndex ? "0 2px 8px #66339922" : "none",
                 }}
               >
-                {item.ImageName}
+                {item?.name}
               </Typography>
             </Paper>
           ))}

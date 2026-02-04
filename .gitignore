@@ -25,3 +25,5 @@ public
 *.njsproj
 *.sln
 *.sw?
+.env.production
+.env.development

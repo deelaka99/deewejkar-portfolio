@@ -10,6 +10,7 @@ const SEO = ({
   article = false,
   author,
   datePublished,
+  noindex = false,
   children,
 }) => {
   const { site } = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const SEO = ({
     url: `${site.siteMetadata.siteUrl}${pathname || ""}`,
     image: image
       ? `${site.siteMetadata.siteUrl}${image}`
-      : `${site.siteMetadata.siteUrl}/og-image.jpg`,
+      : `${site.siteMetadata.siteUrl}/og-image.png`,
     author: author || site.siteMetadata.author,
   };
 
@@ -40,11 +41,14 @@ const SEO = ({
     "@context": "https://schema.org",
     "@type": "Person",
     name: seo.author,
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Full Stack Software Engineer",
     url: site.siteMetadata.siteUrl,
     sameAs: [
       "https://github.com/deelaka99",
-      "https://www.linkedin.com/in/deelaka-kariyawasam",
+      "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
+      "https://stackoverflow.com/users/13145710/deelaka-kariyawasam",
+      "https://x.com/deelakawejith",
+      "https://medium.com/@123wejith",
     ],
     knowsAbout: [
       "Web Development",
@@ -105,7 +109,7 @@ const SEO = ({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-      <meta name="twitter:creator" content="@deewejkar" />
+      <meta name="twitter:creator" content="@deelakawejith" />
 
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
@@ -118,8 +122,14 @@ const SEO = ({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
+      <meta
+        name="robots"
+        content={noindex ? "noindex, nofollow" : "index, follow"}
+      />
+      <meta
+        name="googlebot"
+        content={noindex ? "noindex, nofollow" : "index, follow"}
+      />
 
       {children}
     </Helmet>
