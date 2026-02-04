@@ -3,10 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Deelaka Kariyawasam | Full Stack Software Engineer Portfolio`,
+    title: `Deelaka Kariyawasam | Full Stack Software Engineer`,
     description: `Full Stack Software Engineer specializing in React, Node.js, and mobile development. Showcasing innovative web solutions and software engineering projects.`,
     author: `Deelaka Kariyawasam`,
     siteUrl: `https://www.deelakakariyawasam.dev`,
+    location: `Colombo, Sri Lanka`,
   },
   plugins: [
     "gatsby-plugin-image",

@@ -21,6 +21,7 @@ const SEO = ({
           description
           author
           siteUrl
+          location
         }
       }
     }
@@ -43,6 +44,16 @@ const SEO = ({
     name: seo.author,
     jobTitle: "Full Stack Software Engineer",
     url: site.siteMetadata.siteUrl,
+    description:
+      "Deelaka Kariyawasam is a Full Stack Software Engineer based in Colombo, Sri Lanka, specializing in building high-performance web and mobile applications using React, Node.js, and AI/ML technologies.",
+    gender: "Male",
+    nationality: "Sri Lankan",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Colombo",
+      addressRegion: "Western Province",
+      addressCountry: "Sri Lanka",
+    },
     sameAs: [
       "https://github.com/deelaka99",
       "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
@@ -51,12 +62,47 @@ const SEO = ({
       "https://medium.com/@123wejith",
     ],
     knowsAbout: [
-      "Web Development",
-      "React",
-      "JavaScript",
+      "Full Stack Development",
+      "React.js",
       "Node.js",
-      "Mobile Development",
-      "UI/UX Design",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Mobile App Development",
+      "Artificial Intelligence & Machine Learning Integration",
+      "UI/UX Design Systems",
+      "Cloud Architecture",
+    ],
+  };
+
+  // FAQ Schema for AEO - Providing direct answers for AI queries
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Who is Deelaka Kariyawasam?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Deelaka Kariyawasam is a professional Full Stack Software Engineer and digital solution architect based in Colombo, Sri Lanka.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What technologies does Deelaka Kariyawasam specialize in?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "He specializes in React, Node.js, Mobile Development, and integrating AI/ML capabilities into web applications.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is Deelaka Kariyawasam's current location?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Deelaka Kariyawasam is currently based in Colombo, Sri Lanka.",
+        },
+      },
     ],
   };
 
@@ -112,6 +158,7 @@ const SEO = ({
       <meta name="twitter:creator" content="@deelakawejith" />
 
       {/* Structured Data */}
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       {articleSchema && (
         <script type="application/ld+json">

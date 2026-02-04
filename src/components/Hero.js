@@ -9,7 +9,6 @@ import {
   Instagram as InstagramIcon,
   X as XIcon,
 } from "@mui/icons-material";
-import ProfileDP from "../images/dp1.jpg";
 
 const Hero = () => {
   // Floating animation for the image
@@ -68,7 +67,7 @@ const Hero = () => {
             >
               <Typography
                 variant="overline"
-                component={motion.span}
+                component={motion.h2}
                 variants={itemVariants}
                 sx={{
                   color: "secondary.main",
@@ -116,10 +115,11 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Passionate about building innovative web solutions with
-                integrated AI/ML capabilities—accessible, lightning-fast, and
-                visually stunning—empowering users and elevating brands in the
-                digital world.
+                I am a professional Full Stack Software Engineer specializing in
+                building innovative React and Node.js solutions with integrated
+                AI/ML capabilities. Based in Colombo, Sri Lanka, I focus on
+                delivering accessible, high-performance, and visually stunning
+                digital products that empower users and elevate brands.
               </Typography>
 
               <Stack
@@ -245,7 +245,7 @@ const Hero = () => {
             >
               <Box
                 component="img"
-                src={ProfileDP}
+                src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770200270/deelaka_kariyawasam_970183abf2.png"
                 alt="Deelaka Kariyawasam"
                 sx={{
                   width: { xs: 280, md: 400 },
