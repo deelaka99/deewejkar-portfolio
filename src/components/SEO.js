@@ -21,6 +21,7 @@ const SEO = ({
           description
           author
           siteUrl
+          location
         }
       }
     }
@@ -43,6 +44,15 @@ const SEO = ({
     name: seo.author,
     jobTitle: "Full Stack Software Engineer",
     url: site.siteMetadata.siteUrl,
+    homeLocation: {
+      "@type": "Place",
+      name: site.siteMetadata.location,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Colombo",
+      addressCountry: "Sri Lanka",
+    },
     sameAs: [
       "https://github.com/deelaka99",
       "https://www.linkedin.com/in/deelaka-kariyawasam-7a9bb0213",
