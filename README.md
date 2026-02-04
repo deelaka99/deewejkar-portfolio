@@ -1,6 +1,6 @@
 # DeeWejKar Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/c0d50c33-b0c1-499d-916f-cc1bdf5d649e/deploy-status)](https://app.netlify.com/projects/deelaka-wejith/deploys)
 
-A modern, high-performance developer portfolio built with **Gatsby**, **Material-UI (MUI)**, and **Framer Motion**. This project features a beautiful glassmorphism-inspired design and is fully integrated with a **Strapi CMS** for dynamic content management.
+A modern, high-performance software engineer portfolio built with **Gatsby**, **Material-UI (MUI)**, and **Framer Motion**. This project features a beautiful glassmorphism-inspired design and is fully integrated with a **Strapi CMS** for dynamic content management.
 
 ## 🚀 Key Features
 

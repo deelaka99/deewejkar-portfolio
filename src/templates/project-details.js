@@ -57,7 +57,7 @@ export const Head = ({ pageContext }) => {
     author: {
       "@type": "Person",
       name: "Deelaka Kariyawasam",
-      jobTitle: "Full Stack Developer",
+      jobTitle: "Full Stack Software Engineer",
     },
     ...(imageUrl && { image: imageUrl }),
     url: `https://www.deelakakariyawasam.dev/projects/${slug}/`,
