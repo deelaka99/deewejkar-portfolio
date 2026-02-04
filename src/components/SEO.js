@@ -31,7 +31,7 @@ const SEO = ({
     url: `${site.siteMetadata.siteUrl}${pathname || ""}`,
     image: image
       ? `${site.siteMetadata.siteUrl}${image}`
-      : `${site.siteMetadata.siteUrl}/og-image.jpg`,
+      : `${site.siteMetadata.siteUrl}/og-image.png`,
     author: author || site.siteMetadata.author,
   };
 
