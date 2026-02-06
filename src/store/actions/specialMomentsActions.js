@@ -22,7 +22,7 @@ export const fetchSpecialMoments = () => {
 
     try {
       const response = await fetch(
-        `${process.env.GATSBY_BACKEND_URL}/api/special-moments?populate=*`,
+        `${process.env.GATSBY_BACKEND_URL}/api/special-moments?populate=*&pagination[pageSize]=100`,
       );
       const data = await response.json();
       dispatch(fetchSpecialMomentsSuccess(data));
