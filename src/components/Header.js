@@ -71,11 +71,17 @@ const Header = () => {
                 mx: 2,
                 my: 0.5,
                 fontWeight: 500,
+                "&.active": {
+                  bgcolor: "rgba(187, 134, 252, 0.12)",
+                  color: "primary.main",
+                  borderRight: "4px solid #bb86fc",
+                },
                 "&:hover": {
                   bgcolor: "rgba(255,255,255,0.08)",
-                  color: "primary.main",
                 },
               }}
+              activeClassName="active"
+              partiallyActive={item.link !== "/"}
             >
               <ListItemText primary={item.name} />
             </ListItemButton>
@@ -175,11 +181,17 @@ const Header = () => {
                     color: "white",
                     letterSpacing: 0.5,
                     transition: "all 0.2s",
+                    "&.active": {
+                      bgcolor: "rgba(255,255,255,0.1)",
+                      color: "primary.main",
+                      fontWeight: 700,
+                    },
                     "&:hover": {
                       bgcolor: "rgba(255,255,255,0.08)",
-                      color: "primary.main",
                     },
                   }}
+                  activeClassName="active"
+                  partiallyActive={item.link !== "/"}
                 >
                   {item.name}
                 </Button>
