@@ -15,13 +15,12 @@ import {
 import { Launch as LaunchIcon } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
+const RSS_TO_JSON_API = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${process.env.GATSBY_MEDIUM_USERNAME}`;
+
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const MEDIUM_USERNAME = "@123wejith";
-  const RSS_TO_JSON_API = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${MEDIUM_USERNAME}`;
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -33,7 +32,7 @@ const Articles = () => {
           // Filter out comments (usually they don't have categories) and limit to 3
           const validArticles = data.items
             .filter((item) => item.categories.length > 0)
-            .slice(0, 3);
+            .slice(3, 6);
 
           setArticles(validArticles);
         } else {
@@ -136,6 +135,7 @@ const Articles = () => {
             <Grid
               item
               xs={12}
+              sm={6}
               md={4}
               key={article.guid}
               component={motion.div}
@@ -247,7 +247,7 @@ const Articles = () => {
           <Button
             variant="outlined"
             color="secondary"
-            href={`https://medium.com/${MEDIUM_USERNAME}`}
+            href={`https://medium.com/${process.env.GATSBY_MEDIUM_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
             endIcon={<LaunchIcon />}
