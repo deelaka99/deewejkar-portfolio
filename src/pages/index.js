@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Languages from "../components/Languages";
 import FeaturedProjects from "../components/FeaturedProjects";
+import Articles from "../components/Articles";
 import Seo from "../components/SEO";
 import { Box } from "@mui/material";
 
@@ -16,6 +17,7 @@ const IndexPage = () => {
         <Hero />
         <Languages />
         <FeaturedProjects />
+        <Articles />
       </Box>
     </Layout>
   );

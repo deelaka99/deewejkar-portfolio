@@ -88,11 +88,12 @@ const FeaturedProjects = () => {
           </Button>
         </Box>
 
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
           {projectList?.data?.slice(0, 3).map((project, index) => (
             <Grid
               item
               xs={12}
+              sm={6}
               md={4}
               key={project.id}
               component={motion.div}
