@@ -4,21 +4,21 @@ import {
   Typography,
   Box,
   Grid,
-  // Paper,
-  // Button,
-  // Stack,
+  Paper,
+  Button,
+  Stack,
   Chip,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import Seo from "../components/SEO";
-// import {
-//   Launch as LaunchIcon,
-//   Code as CodeIcon,
-//   RecordVoiceOver as MentorIcon,
-//   EmojiEvents as JudgeIcon,
-//   School as SchoolIcon,
-// } from "@mui/icons-material";
+import {
+  Launch as LaunchIcon,
+  Code as CodeIcon,
+  RecordVoiceOver as MentorIcon,
+  EmojiEvents as JudgeIcon,
+  School as SchoolIcon,
+} from "@mui/icons-material";
 
 const AboutPage = () => {
   const containerVariants = {
@@ -181,7 +181,7 @@ const AboutPage = () => {
                 />
                 <Box
                   component="img"
-                  src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770201179/medium_IMG_4735_62d65a2aab.png"
+                  src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770385224/medium_SUSL_FOC_Batch_photo_day_2k24_3_7353129eb7.png"
                   alt="Deelaka Kariyawasam - Full Stack Software Engineer Professional Portrait"
                   sx={{
                     width: "100%",
@@ -202,7 +202,7 @@ const AboutPage = () => {
           </Grid>
 
           {/* 3. Community & Mentorship Section (Femovate) */}
-          {/* <Grid container spacing={8} alignItems="center">
+          <Grid container spacing={8} alignItems="center">
             <Grid item xs={12} md={6}>
               <Box
                 component={motion.div}
@@ -225,7 +225,7 @@ const AboutPage = () => {
                 />
                 <Box
                   component="img"
-                  src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770200270/deelaka_kariyawasam_970183abf2.png"
+                  src="https://res.cloudinary.com/dp5vkrjof/image/upload/v1770385844/Femovate_2025_1_8a20923aae.jpg"
                   alt="Deelaka Kariyawasam Mentoring at Femovate 2025"
                   sx={{
                     width: "100%",
@@ -331,7 +331,7 @@ const AboutPage = () => {
                 </Button>
               </Box>
             </Grid>
-          </Grid> */}
+          </Grid>
         </motion.div>
       </Container>
     </Layout>
