@@ -14,10 +14,8 @@ import Layout from "../components/Layout";
 import Seo from "../components/SEO";
 import {
   Launch as LaunchIcon,
-  Code as CodeIcon,
   RecordVoiceOver as MentorIcon,
   EmojiEvents as JudgeIcon,
-  School as SchoolIcon,
 } from "@mui/icons-material";
 
 const AboutPage = () => {
