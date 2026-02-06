@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: `Deelaka Kariyawasam | Full Stack Software Engineer`,
     description: `Full Stack Software Engineer specializing in React, Node.js, and mobile development. Showcasing innovative web solutions and software engineering projects.`,
